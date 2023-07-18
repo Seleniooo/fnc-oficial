@@ -164,6 +164,7 @@
 }
 
 .modal-container {
+  visibility: hidden;
   display: flex;
   justify-content: space-between;
   width: 982px;
