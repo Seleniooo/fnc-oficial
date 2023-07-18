@@ -159,7 +159,165 @@
   background-image: url(../img/noise-navbar.svg);
 }
 
-/* fondo */
+/* MODAL DETALLES */
+.no-va {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: space-between;
+  width: 982px;
+  height: 317px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.96) 100%
+    ),
+    linear-gradient(144deg, #fbf3ff 0%, rgba(195, 88, 245, 0) 100%);
+
+  /* glass */
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+}
+
+.info-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+.info-modal p {
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.info-modal .precio {
+  color: #595859;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 101.9%;
+  /* 24.456px */
+}
+
+.info-modal h1 {
+  margin-top: 32px;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 101.9%;
+  /* 16.304px */
+  letter-spacing: 4.88px;
+}
+
+.info-modal .detalles {
+  color: rgba(57, 45, 45, 0.94);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  /* 19.2px */
+  letter-spacing: 1.04px;
+}
+
+.container-envio {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 8px;
+}
+
+.envio {
+  display: flex;
+  /*  justify-content: center; */
+  align-items: center;
+  width: 376px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  border: 1px solid #6837e3;
+}
+
+.envio img {
+  /*  width: 12px;
+  height: 24px;
+  transform: rotate(-90deg);
+  flex-shrink: 0; */
+  margin-left: 40px;
+}
+
+.boton-drop-envio {
+  /*  display: flex;
+  align-self: center; */
+  margin-left: 34%;
+  color: #6837e3;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15.938px;
+  /* 99.611% */
+  letter-spacing: 4.545px;
+}
+
+.puntitos-m {
+  display: flex;
+  justify-content: center;
+}
+
+.punto {
+  padding: 5px;
+}
+
+.agregar-m {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.agregar-m button {
+  width: 376px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: #6837e3;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15.938px;
+  /* 99.611% */
+  letter-spacing: 4.545px;
+}
+
+.cerrar-modal {
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.fotos-m {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+/* media query */
 
 @media (min-width: 992px) {
   .hamburguesa-display {
