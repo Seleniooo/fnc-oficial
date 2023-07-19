@@ -27,100 +27,77 @@
   justify-content: space-between;
 }
 
+
 .grid-container {
   /*  display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr; */
   border-style: solid;
   border-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10%;
+}
+
+
+.nube-style {
+  width: 340px;
+  height: 370px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .nube-1 {
-  width: 338px;
-  height: 329px;
-  left: 22%;
-  top: 5%;
+  margin-top: 10%;
   background-image: url(../img/productos/nube-1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .nube-2 {
-  height: 298px;
-  width: 354px;
-  position: absolute;
-  top: 22%;
-  left: 5%;
+
   background-image: url(../img/productos/nube-2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+
 }
 
 .nube-3 {
-  height: 340px;
-  width: 380px;
-  position: absolute;
-  right: 3%;
-  top: 5%;
+  margin-top: 10%;
+
   background-image: url(../img/productos/nube-3.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
 }
 
 .nube-4 {
-  width: 366px;
-  height: 441.687px;
-  position: absolute;
-  right: 35%;
-  top: 20%;
-  background-image: url(../img/productos/nube-4.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+  margin-top: 12%;
+
+  background-image: url(../img/productos/nube-4.png);
+
 }
 
 .nube-5 {
-  width: 326.991px;
-  height: 382.05px;
-  position: absolute;
-  right: 15%;
-  top: 33%;
+
   background-image: url(../img/productos/nube-5.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
 }
 
 .nube-6 {
-  width: 370.998px;
-  height: 582.666px;
-  position: absolute;
-  right: 35%;
-  top: 43%;
+
   background-image: url(../img/productos/nube-6.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
 }
 
 .nube-7 {
-  width: 448px;
-  height: 282px;
-  position: absolute;
-  right: 15%;
-  top: 63%;
+  margin-top: 10%;
   background-image: url(../img/productos/nube-7.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
 }
 
 .nube-8 {
-  width: 423.735px;
-  height: 420.303px;
-  position: absolute;
-  right: 25%;
-  top: 77%;
+
   background-image: url(../img/productos/nube-8.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
+
+
 
 /* navvar */
 
