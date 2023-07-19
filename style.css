@@ -42,27 +42,27 @@
 
 
 .nube-style {
-  width: 340px;
-  height: 370px;
+  width: 300px;
+  height: 330px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .nube-1 {
   margin-top: 10%;
-  background-image: url(../img/productos/nube-1.png);
+  background-image: url(../img/productos/producto1.svg);
 }
 
 .nube-2 {
 
-  background-image: url(../img/productos/nube-2.png);
+  background-image: url(../img/productos/producto2.svg);
 
 }
 
 .nube-3 {
   margin-top: 10%;
 
-  background-image: url(../img/productos/nube-3.png);
+  background-image: url(../img/productos/producto3.svg);
 
 }
 
@@ -70,34 +70,93 @@
 
   margin-top: 12%;
 
-  background-image: url(../img/productos/nube-4.png);
+  background-image: url(../img/productos/producto4.svg);
 
 }
 
 .nube-5 {
 
-  background-image: url(../img/productos/nube-5.png);
+  background-image: url(../img/productos/producto5.svg);
 
 }
 
 .nube-6 {
-
-  background-image: url(../img/productos/nube-6.png);
+  margin-top: 12%;
+  background-image: url(../img/productos/producto6.svg);
 
 }
 
 .nube-7 {
   margin-top: 10%;
-  background-image: url(../img/productos/nube-7.png);
+  background-image: url(../img/productos/producto7.svg);
 
 }
 
 .nube-8 {
 
-  background-image: url(../img/productos/nube-8.png);
+  background-image: url(../img/productos/producto8.svg);
 }
 
 
+.nube-9 {
+  margin-top: 10%;
+  background-image: url(../img/productos/producto9.svg);
+}
+
+
+.nube-10 {
+  margin-top: 8%;
+  background-image: url(../img/productos/producto10.svg);
+}
+
+
+.nube-11 {
+
+  background-image: url(../img/productos/producto11.svg);
+}
+
+
+.nube-12 {
+  margin-top: 12%;
+  background-image: url(../img/productos/producto12.svg);
+}
+
+
+
+.nube-13 {
+  margin-top: 8%;
+  background-image: url(../img/productos/producto13.svg);
+}
+
+
+.nube-14 {
+
+  background-image: url(../img/productos/producto14.svg);
+}
+
+
+.nube-15 {
+  margin-top: 12%;
+  background-image: url(../img/productos/producto15.svg);
+}
+
+
+.nube-16 {
+  margin-top: 8%;
+  background-image: url(../img/productos/producto16.svg);
+}
+
+
+.nube-17 {
+
+  background-image: url(../img/productos/producto17.svg);
+}
+
+
+.nube-18 {
+  margin-top: 12%;
+  background-image: url(../img/productos/producto18.svg);
+}
 
 /* navvar */
 
@@ -133,12 +192,7 @@
 }
 
 /* MODAL DETALLES */
-.no-va {
-  background-color: burlywood;
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
+
 
 .modal-container {
   visibility: hidden;
@@ -302,5 +356,19 @@
   .normal-display {
     display: none !important;
     background-color: red;
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width:500px) {
+
+  .nube-style {
+    width: 150px;
+    height: 180px;
+  }
+
+  .grid-container {
+    justify-content: space-between;
   }
 }
