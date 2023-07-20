@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --desktop-prod-width: 300px;
+  --desktop-prod-height: 330px;
+}
+
 /* fondo */
 .body-index {
   /*  display: grid;
@@ -42,8 +47,8 @@
 
 
 .nube-style {
-  width: 300px;
-  height: 330px;
+  width: var(--desktop-prod-width);
+  height: var(--desktop-prod-height);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -358,8 +363,17 @@
 
 .boton-producto {
   background: none;
-  border: none
+  border: none;
+  width: var(--desktop-prod-width);
+  height: var(--desktop-prod-height);
+
+
 }
+
+.boton-producto:hover {
+  cursor: pointer;
+}
+
 
 .boton-producto span {
   visibility: hidden;
