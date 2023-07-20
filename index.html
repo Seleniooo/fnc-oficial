@@ -51,7 +51,7 @@
       </div>
       <div><img src="./img/logo.svg" alt="" /></div>
 
-      <div><img src="./img/carrito.svg" alt="" /></div>
+      <div><img src="./img/carrito.svg" alt="" /><div class="bolita-compra">0</div></div>
     </div>
   </nav>
 
@@ -66,7 +66,7 @@
 
       <div><img src="./img/logo.svg" alt="" /></div>
 
-      <div><img src="./img/carrito.svg" alt="" /></div>
+      <div><img src="./img/carrito.svg" alt="" /><div class="bolita-compra">0</div></div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
@@ -97,17 +97,53 @@
 
 
   <section class="grid-container">
+    <section class="modal-container">
+      <section class="fotos-modal">
+        <div class="fotos-m">
+          <img src="img/modal/foto-muestra.svg" alt="" />
+        </div>
+        <div class="puntitos-m">
+          <img class="punto" src="img/modal/puntito.svg" alt="" />
+          <img class="punto" src="img/modal/puntito.svg" alt="" />
+          <img class="punto" src="img/modal/puntito.svg" alt="" />
+          <img class="punto" src="img/modal/puntito.svg" alt="" />
+          <img class="punto" src="img/modal/puntito.svg" alt="" />
+        </div>
+      </section>
+      <section class="info-modal">
+        <h1 id="nombre-producto"></h1>
+        <p class="detalles" id="detalle-producto"></p>
+        <p class="precio" id="precio-producto"></p>
+        <section class="container-envio">
+          <div class="envio">
+            <div class="boton-drop-envio">Elegir envío</div>
+            <img src="img/modal/flecha.svg" alt="" />
+          </div>
+        </section>
+        <div class="agregar-m">
+          <button class="button-agregar-modal">Agregar</button>
+        </div>
+      </section>
+      <section class="cerrar-modal">
+        <button class="button-cerrar-modal">
+          <img src="img/modal/close-modal.svg" alt="cruz-cierre" />
+        </button>
+      </section>
+    </section>
     <div class="nube-1 nube-style" data-aos="fade-right" data-aos-duration="1400">
       <button class="boton-producto">
-        <span class="titulo-producto"> El tomatón 😍 </span>
+        <img src="./img/productos/producto1.svg" alt="Tasitas"/>
+        <span class="titulo-producto"> Bowlsitos en chanclas 😍 </span>
         <span class="precio-producto"> 30 </span>
         <span class="detalles-producto">
-          Oh no! El tomatón se distrajo y se tiró de la tapita de su cabeza XD
+          Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
         </span>
       </button>
     </div>
+    
     <div class="nube-2 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
       <button class="boton-producto">
+        <img src="./img/productos/producto2.svg" alt="Tasitas"/>
         <span class="titulo-producto">
           Perrito tomando trago con pajita 🤓
         </span>
@@ -120,6 +156,7 @@
     </div>
     <div class="nube-3 nube-style" data-aos="fade-left" data-aos-duration="1900">
       <button class="boton-producto">
+        <img src="./img/productos/producto3.svg" alt="Tasitas"/>
         <span class="titulo-producto"> El tomatón 😍 </span>
         <span class="precio-producto"> 40 </span>
         <span class="detalles-producto">
@@ -129,7 +166,8 @@
       </button>
     </div>
     <div class="nube-4 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
-      <button class="boton-producto">
+      <button class="boton-producto" >
+      <img src="./img/productos/producto4.svg" alt="Tasitas"/>
         <span class="titulo-producto"> Familia Tasitas 😭 </span>
         <span class="precio-producto"> 25 </span>
         <span class="detalles-producto">
@@ -158,47 +196,22 @@
 
   </section>
 
-  <section class="modal-container">
-    <section class="fotos-modal">
-      <div class="fotos-m">
-        <img src="img/modal/foto-muestra.svg" alt="" />
-      </div>
-      <div class="puntitos-m">
-        <img class="punto" src="img/modal/puntito.svg" alt="" />
-        <img class="punto" src="img/modal/puntito.svg" alt="" />
-        <img class="punto" src="img/modal/puntito.svg" alt="" />
-        <img class="punto" src="img/modal/puntito.svg" alt="" />
-        <img class="punto" src="img/modal/puntito.svg" alt="" />
-      </div>
-    </section>
-    <section class="info-modal">
-      <h1 id="nombre-producto"></h1>
-      <p class="detalles" id="detalle-producto"></p>
-      <p class="precio" id="precio-producto"></p>
-      <section class="container-envio">
-        <div class="envio">
-          <div class="boton-drop-envio">Elegir envío</div>
-          <img src="img/modal/flecha.svg" alt="" />
-        </div>
-      </section>
-      <div class="agregar-m">
-        <button>Agregar</button>
-      </div>
-    </section>
-    <section class="cerrar-modal">
-      <button class="button-cerrar-modal">
-        <img src="img/modal/close-modal.svg" alt="cruz-cierre" />
-      </button>
-    </section>
-  </section>
+  
 
   <script>
     const cerrarModal = document.querySelector(".button-cerrar-modal");
+    const agregarProductoModal = document.querySelector(".button-agregar-modal");
     const mostrarModal = document.querySelectorAll(".boton-producto");
 
     cerrarModal.addEventListener("click", () => {
       const modalDisplay = document.querySelector(".modal-container");
       modalDisplay.style.visibility = "hidden";
+    });
+    
+    agregarProductoModal.addEventListener("click", () => {
+      const contadorProductos = document.querySelector(".bolita-compra");
+      contadorProductos.style.visibility = "visible";
+      contadorProductos.textContent = +contadorProductos.textContent + 1
     });
 
     for (let i = 0; i < mostrarModal.length; i++) {
@@ -208,7 +221,7 @@
         const detalle = this.querySelector(".detalles-producto").textContent;
 
         document.querySelector("#nombre-producto").textContent = titulo;
-        document.querySelector("#precio-producto").textContent = "$" + precio;
+        document.querySelector("#precio-producto").textContent = "€" + precio;
         document.querySelector("#detalle-producto").textContent = detalle;
 
         const modalDisplay = document.querySelector(".modal-container");

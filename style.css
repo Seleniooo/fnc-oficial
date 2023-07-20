@@ -191,12 +191,25 @@
   background-image: url(../img/noise-navbar.svg);
 }
 
+.bolita-compra {
+  background-color: #dd8b2dee;
+  visibility: hidden;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 10px;
+  text-align: center;
+}
+
 /* MODAL DETALLES */
 
 
 .modal-container {
   visibility: hidden;
   display: flex;
+  position: fixed;
+  z-index: 3;
   justify-content: space-between;
   width: 982px;
   height: 317px;
@@ -341,6 +354,15 @@
 .fotos-m {
   margin-left: 8px;
   margin-top: 8px;
+}
+
+.boton-producto {
+  background: none;
+  border: none
+}
+
+.boton-producto span {
+  visibility: hidden;
 }
 
 /* media query */
