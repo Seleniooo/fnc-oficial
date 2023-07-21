@@ -379,6 +379,14 @@
   visibility: hidden;
 }
 
+
+.menu-productos {
+  z-index: 3;
+  position: fixed;
+  margin-left: -66px;
+}
+
+
 /* media query */
 
 @media (min-width: 992px) {
