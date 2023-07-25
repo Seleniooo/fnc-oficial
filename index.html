@@ -111,6 +111,16 @@
         <li class="menu">Miniaturas</li>
       </ul>
     </section>
+
+
+    <section class="titulos-shop">
+      <h1 class="titulo titulo-s">SHOP</h1>
+      <p class="parrafo parrafo-s">Selecciona el objeto para ver más detalles, agregar al carrito y consultar </p>
+    </section>
+
+
+
+
     <section class="modal-container">
       <section class="fotos-modal">
         <div class="fotos-m">
@@ -317,11 +327,24 @@
 
   </section>
 
-
-
+  <div class="fondo-1" data-aos="fade-down" data-aos-duration="1900"></div>
+  <div class="fondo-2" data-aos="fade-right" data-aos-duration="1900"></div>
+  <div class="fondo-3" data-aos="fade-left" data-aos-duration="1900"></div>
+  <div class="fondo-4" data-aos="fade-down" data-aos-duration="1900"></div>
+  <div class="fondo-5" data-aos="fade-right" data-aos-duration="1900"></div>
+  <div class="fondo-6" data-aos="fade-left" data-aos-duration="1900"></div>
+  <div class="fondo-7" data-aos="fade-left" data-aos-duration="1900"></div>
   <!-- nosotros -->
 
+
+
+  <section class="titulos-nosotros">
+    <p class="titulo titulo-p">¿QUIÉN?</p>
+    <p class="parrafo parrafo-n">Selecciona el objeto para ver más detalles, agregar al carrito y consultar </p>
+  </section>
+
   <section class="nos-main">
+
     <div class="nos-fixed">
       <div class="nos-container">
         <div class="nos-card">
@@ -400,6 +423,118 @@
       </div>
     </div>
   </section>
+
+  <!-- contacto -->
+  <section class="titulos-contacto">
+    <h2 class="titulo titulo-c">CONTACTO</h2>
+    <p class="parrafo parrafo-c">Selecciona el objeto para ver más detalles, agregar al carrito y consultar </p>
+  </section>
+
+
+  <section class="main-contacto">
+    <div class="form-contenedor">
+      <div class="col-12 ps-0 pe-0 d-flex flex-column justify-content-center align-items-center" id="presupuesto">
+
+
+        <div class="box-p-contact text-center d-flex justify-content-center align-items-center">
+          <p>
+            ¿Alguna consulta? Te responderemos a la brevedad, ¡quizás!
+          </p>
+        </div>
+
+        <div class="col-12 mt-4 d-flex justify-content-center position: fixed;
+      display: flex;
+      padding: 3rem;
+      width: 50vw;
+      min-width: 350px;
+      background: linear-gradient(163.82deg, rgba(251, 243, 255, 0.3) 1.33%, rgba(195, 88, 245, 0) 95.23%);
+      /* glass */
+
+      box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(20px);
+      margin-top: 10%;
+      justify-content: center; box-form">
+
+
+
+
+          <form id="messageForm">
+            <div class="box-level-one d-flex d-row flex-wrap justify-content-around align-items-center">
+
+              <div class="box-son-level-one" data-aos="zoom-in">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="box-son-level-one" data-aos="zoom-in">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+
+            </div>
+
+            <div class="box-son-level-two" data-aos="zoom-in">
+              <label for="message">Cuentanos tu idea:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+
+
+              <script>
+                function shareOnWhatsApp() {
+                  const mensaje = document.querySelector('#message')?.value
+                  const mail = document.querySelector('#email').value
+                  const nombre = document.querySelector('#name').value
+                  if (!mensaje || !mail || !nombre) { return alert('Los 3 campos del formulario son necesarios!') }
+                  const regexMail = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,})+$/;
+                  if (!regexMail.test(mail)) {
+                    return alert('el mail no tiene el formato correcto nombre@algo.com')
+                  }
+                  const mensajeAEnviar = encodeURIComponent(`Hola! Soy ${nombre} y te quería consultar lo siguiente: ${mensaje}. Mi mail es ${mail}`)
+                  const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
+                  window.open(whatsappUrl);
+                }
+              </script>
+              <input type="submit" onclick="shareOnWhatsApp()" value="Enviar Mensaje" data-aos="fade-right"
+                data-aos-offset="50" data-aos-easing="ease-in-sine">
+
+            </div>
+
+
+          </form>
+
+
+
+
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <section class="footer-container">
+      <div class="links-footer-desktop">
+        <a href="https://www.instagram.com/feliznocumple_/" target="_blank">Instagram</a>
+        <a href="https://www.etsy.com/" target="_blank">Amazon Handmade</a>
+        <a href="whatsapp.com" target="_blank">Whatsapp</a>
+        <p>SITE CREDITS</p>
+      </div>
+      <div class="links-footer-mobile">
+        <a href="https://www.instagram.com/feliznocumple_/" target="_blank"><img src="./img/iconos-footer/instagram.png"
+            alt="instagram"></a>
+        <a href="https://www.etsy.com/" target="_blank"><img src="./img/iconos-footer/etsy.png" alt="etsy"></a>
+        <a href="whatsapp.com" target="_blank"><img src="./img/iconos-footer/whatsapp.png" alt="whatsapp"></a>
+        <p>SITE CREDITS</p>
+      </div>
+    </section>
+  </footer>
 
 
 
