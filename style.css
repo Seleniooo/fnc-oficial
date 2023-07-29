@@ -32,11 +32,6 @@
   /*  width: 100%; */
 }
 
-.container-fluid-s {
-  display: flex;
-  justify-content: space-between;
-}
-
 
 .titulos-shop {
   position: absolute;
@@ -230,6 +225,26 @@
   line-height: normal;
   letter-spacing: 0.11875rem;
 
+}
+
+.nav-link-n:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link-n:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link-n:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url('./img/productos/producto10.svg');
 }
 
 
@@ -835,7 +850,22 @@ footer p {
 .links-footer-desktop a {
   color: #000 !important;
   letter-spacing: 3.6px;
+}
 
+.links-footer-desktop a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.links-footer-desktop a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.links-footer-desktop a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 .links-footer-mobile {
@@ -844,33 +874,7 @@ footer p {
   min-width: 70%;
   display: flex;
   justify-content: space-around;
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -886,7 +890,6 @@ footer p {
 @media (max-width: 992px) {
   .normal-display {
     display: none !important;
-    background-color: red;
   }
 }
 
