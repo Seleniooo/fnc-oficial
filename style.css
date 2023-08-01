@@ -266,6 +266,10 @@
   z-index: 4;
 }
 
+.boton-carrito:hover {
+  cursor: pointer;
+}
+
 /* MODAL DETALLES */
 
 
@@ -661,7 +665,6 @@ align-items: center;
 }
 
 .box-p-contact p {
-  /* chistesito! */
   width: 100%;
   font-size: 16px;
   font-family: 'Inter', sans-serif;

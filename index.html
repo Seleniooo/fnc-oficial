@@ -12,6 +12,7 @@
     rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="carrito.css">
   <meta name="description" content="Feliz no Cumple, ceramica y objetos de decoracion divertida">
   <meta name="keywords" content="ceramica, decoracion del hogar, feliz no cumple, handmade, bowl de ceramica">
   <title>FNC</title>
@@ -37,7 +38,7 @@
       </div>
       <div><img src="./img/logo.svg" alt="" /></div>
 
-      <div><img src="./img/carrito.svg" alt="" />
+      <div class="boton-carrito"><img src="./img/carrito.svg" alt="" />
         <div class="bolita-compra">0</div>
       </div>
     </div>
@@ -105,6 +106,53 @@
     </section>
 
 
+    <section class="carrito-container">
+      <div class="cerrar-carrito">
+        <img src="./img/carrito/equis-cerrar.svg" alt="">
+      </div>
+      <div class="carrito-titulo">
+        <img src="./img/carrito.svg" alt="">
+        <h1>Carrito de compras</h1>
+      </div>
+
+      <section class="carrito-detalles">
+        <div class="foto-carrito">
+          <img src="./img/carrito/foto.svg" alt="">
+        </div>
+        <div class="texto-carrito">
+          <p class="nombre-prod"> TAZA PERRITO dhdfjhjhdghjghjdhgdh</p>
+          <br>
+          <p class="precio-prod">600$</p>
+        </div>
+        <div class="icono-eliminar">
+          <img src="./img/carrito/basura.svg" alt="">
+        </div>
+      </section>
+
+
+
+      <section class="carrito-detalles">
+        <div class="foto-carrito">
+          <img src="./img/carrito/foto.svg" alt="">
+        </div>
+        <div class="texto-carrito">
+          <p class="nombre-prod"> TAZA PERRITO dhdfjhjhdghjghjdhgdh</p>
+          <br>
+          <p class="precio-prod">600$</p>
+        </div>
+        <div class="icono-eliminar">
+          <img src="./img/carrito/basura.svg" alt="">
+        </div>
+      </section>
+
+
+      <span class="total">Total:</span>
+      <div class="boton-contenedor">
+        <button class="carrito-boton">CONCRETAR PEDIDO</button>
+        <a href="">SEGUIR VIENDO</a>
+      </div>
+
+    </section>
 
 
     <section class="modal-container">
@@ -624,6 +672,20 @@
         filtrarProductos(categoriasEnum[(opcionesMenu[i].textContent).toLowerCase()])
       });
     }
+
+    /* funcion abrir carrito en click */
+    const abrirCarrito = document.querySelector(".boton-carrito");
+    abrirCarrito.addEventListener("click", () => {
+      const modalDisplay = document.querySelector(".carrito-container");
+      modalDisplay.style.visibility = "visible";
+    });
+
+    /* funcion cerrar carrito en click */
+    const cerrarCarrito = document.querySelector(".cerrar-carrito");
+    cerrarCarrito.addEventListener("click", () => {
+      const modalDisplay = document.querySelector(".carrito-container");
+      modalDisplay.style.visibility = "hidden";
+    });
 
     /* función para contacto por Whatsapp */
     function shareOnWhatsApp() {
