@@ -110,29 +110,71 @@
     <section class="modal-container">
       <section class="fotos-modal">
         <div class="fotos-m">
-          <img src="./img/modal/foto-muestra.svg" alt="" />
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/modal/foto-muestra-1.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/modal/foto-muestra-1.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/modal/foto-muestra-1.svg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-        <div class="puntitos-m">
+        <!-- <div class="puntitos-m">
           <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
           <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
           <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
           <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
           <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
-        </div>
+        </div> -->
       </section>
       <section class="info-modal">
         <h1 id="nombre-producto"></h1>
         <p class="detalles" id="detalle-producto"></p>
         <p class="precio" id="precio-producto"></p>
-        <section class="container-envio">
-          <div class="envio">
+        <section>
+          <section class="container-envio">
+            <!-- <div class="envio">
             <div class="boton-drop-envio">Elegir envío</div>
             <img src="./img/modal/flecha.svg" alt="flecha" />
+          </div> -->
+            <div>
+              <select class="form-select envio" aria-label="Default select example">
+                <option selected>ELEGIR MODELO</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div>
+              <select class="form-select envio" aria-label="Default select example">
+                <option selected>ELEGIR ENVÍO</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </section>
+          <div class="agregar-m">
+            <button class="button-agregar-modal">AGREGAR</button>
+
+            <a href="#"> o comprar en AMAZON HANDMADE</a>
           </div>
         </section>
-        <div class="agregar-m">
-          <button class="button-agregar-modal">Agregar</button>
-        </div>
       </section>
       <section class="cerrar-modal">
         <button class="button-cerrar-modal">
@@ -152,11 +194,12 @@
 
     <div class="nube-2 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
       <button class="boton-producto">
-        <span class="titulo-producto"> El tomatón 😍 </span>
+        <span class="titulo-producto"> EL TOMATON 😍 </span>
         <span class="precio-producto"> 40 </span>
         <span class="detalles-producto">
           El tomatón se agarra del tallo y se le sale la cabesita por
           distraído XD
+          15 cm x 15 cm
         </span>
       </button>
     </div>
@@ -471,7 +514,7 @@
   </section>
 
 
-  <footer>
+  <!-- <footer>
     <section class="footer-container">
       <div class="links-footer-desktop">
         <a href="https://www.instagram.com/feliznocumple_/" target="_blank">Instagram</a>
@@ -492,7 +535,7 @@
       </div>
     </section>
   </footer>
-
+ -->
 
 
 
