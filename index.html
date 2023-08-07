@@ -653,6 +653,10 @@
     const mostrarModal = document.querySelectorAll(".boton-producto");
     for (let i = 0; i < mostrarModal.length; i++) {
       mostrarModal[i].addEventListener("click", function () {
+        const carritoDisplay = document.querySelector(".carrito-container");
+        if (carritoDisplay) {
+          carritoDisplay.style.visibility = "hidden";
+        }
         const titulo = this.querySelector(".titulo-producto").textContent;
         const precio = this.querySelector(".precio-producto").textContent;
         const detalle = this.querySelector(".detalles-producto").textContent;
@@ -734,13 +738,13 @@
     /* funcion cerrar carrito en click de botón cerrar o de "seguir viendo"*/
     const cerrarCarrito = document.querySelector(".cerrar-carrito");
     cerrarCarrito.addEventListener("click", () => {
-      const modalDisplay = document.querySelector(".carrito-container");
-      modalDisplay.style.visibility = "hidden";
+      const carritoDisplay = document.querySelector(".carrito-container");
+      carritoDisplay.style.visibility = "hidden";
     });
     const seguirViendo = document.querySelector(".seguir-viendo");
     seguirViendo.addEventListener("click", () => {
-      const modalDisplay = document.querySelector(".carrito-container");
-      modalDisplay.style.visibility = "hidden";
+      const carritoDisplay = document.querySelector(".carrito-container");
+      carritoDisplay.style.visibility = "hidden";
     });
 
     /* función para contacto por Whatsapp */
