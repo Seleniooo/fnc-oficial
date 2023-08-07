@@ -106,89 +106,29 @@
       </section>
 
 
-    <section class="carrito-container">
-      <div class="cerrar-carrito">
-        <img src="./img/carrito/equis-cerrar.svg" alt="">
-      </div>
-      <div class="carrito-titulo">
-        <img src="./img/carrito.svg" alt="">
-        <h1>Carrito de compras</h1>
-      </div>
+      <section class="carrito-container">
+        <div class="cerrar-carrito">
+          <img src="./img/carrito/equis-cerrar.svg" alt="cerrar carrito">
+        </div>
+        <div class="carrito-titulo">
+          <img src="./img/carrito.svg" alt="">
+          <h1>Carrito de compras</h1>
+        </div>
 
-      <section class="carrito-detalles">
-        <div class="foto-carrito">
-          <img src="./img/carrito/foto.svg" alt="">
+        <span class="total">Total:</span>
+        <div class="boton-contenedor">
+          <button class="carrito-boton" onclick="contactoDeCompra()">CONCRETAR PEDIDO</button>
+          <a class="seguir-viendo">SEGUIR VIENDO</a>
         </div>
-        <div class="texto-carrito">
-          <p class="nombre-prod"> TAZA PERRITO dhdfjhjhdghjghjdhgdh</p>
-          <br>
-          <p class="precio-prod">600$</p>
-        </div>
-        <div class="icono-eliminar">
-          <img src="./img/carrito/basura.svg" alt="">
-        </div>
+
       </section>
-
-
-
-      <section class="carrito-detalles">
-        <div class="foto-carrito">
-          <img src="./img/carrito/foto.svg" alt="">
-        </div>
-        <div class="texto-carrito">
-          <p class="nombre-prod"> TAZA PERRITO dhdfjhjhdghjghjdhgdh</p>
-          <br>
-          <p class="precio-prod">600$</p>
-        </div>
-        <div class="icono-eliminar">
-          <img src="./img/carrito/basura.svg" alt="">
-        </div>
-      </section>
-
-
-      <span class="total">Total:</span>
-      <div class="boton-contenedor">
-        <button class="carrito-boton">CONCRETAR PEDIDO</button>
-        <a href="">SEGUIR VIENDO</a>
-      </div>
-
-    </section>
 
 
       <section class="modal-container">
         <section class="fotos-modal">
           <div class="fotos-m">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/modal/foto-muestra-1.svg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/modal/foto-muestra-1.svg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/modal/foto-muestra-1.svg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
+            <img id="fotos-producto" width="200px" src="./img/modal/foto-muestra.svg" alt="muestra-imagen" />
           </div>
-          <!-- <div class="puntitos-m">
-          <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
-          <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
-          <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
-          <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
-          <img class="punto" src="./img/modal/puntito.svg" alt="puntito" />
-        </div> -->
         </section>
         <section class="info-modal">
           <h1 id="nombre-producto"></h1>
@@ -679,19 +619,51 @@
       const contadorProductos = document.querySelector(".bolita-compra");
       contadorProductos.style.visibility = "visible";
       contadorProductos.textContent = +contadorProductos.textContent + 1
-    });
+      const titulo = document.querySelector("#nombre-producto").textContent;
+      const precio = document.querySelector("#precio-producto").textContent;
+      const detalle = document.querySelector("#detalle-producto").textContent;
+      const imagen = document.querySelector('#fotos-producto').src
+      añadirProductoACarrito(titulo, precio, imagen)
 
-    /* funcion elegir categoria en click */
+    });
+    function añadirProductoACarrito(titulo, precio, imagen) {
+      var myDiv = document.querySelector('.carrito-container');
+      var newSection = document.createElement('section');
+      newSection.innerHTML = `<section class="carrito-detalles">
+        <div class="foto-carrito">
+          <img src="${imagen}" width="100px" alt="imagen producto">
+        </div>
+        <div class="texto-carrito">
+          <p class="nombre-prod"> ${titulo}</p>
+          <br>
+          <p class="precio-prod">${precio}</p>
+        </div>
+        <div class="icono-eliminar">
+          <img class="boton-eliminar" src="./img/carrito/basura.svg" alt="borrar producto">
+        </div>
+      </section>`;
+      // Get the third child of myDiv
+      var thirdChild = myDiv.children[2];
+      // Insert the new section before the third child
+      myDiv.insertBefore(newSection, thirdChild);
+    }
+
+    /* funcion mostar modal detalles en click sobre producto */
     const mostrarModal = document.querySelectorAll(".boton-producto");
     for (let i = 0; i < mostrarModal.length; i++) {
       mostrarModal[i].addEventListener("click", function () {
         const titulo = this.querySelector(".titulo-producto").textContent;
         const precio = this.querySelector(".precio-producto").textContent;
         const detalle = this.querySelector(".detalles-producto").textContent;
+        const capturadorDeImagen = document.querySelector(`.${mostrarModal[i].parentElement.classList[0].split(' ')[0]}`)
+        const imagenCapturada = window.getComputedStyle(capturadorDeImagen).getPropertyValue('background-image');
+        const urlImagen = imagenCapturada.split('/').pop().slice(0, -2)
 
         document.querySelector("#nombre-producto").textContent = titulo;
         document.querySelector("#precio-producto").textContent = "€" + precio;
         document.querySelector("#detalle-producto").textContent = detalle;
+        const foto = document.querySelector("#fotos-producto")
+        foto.src = './img/productos/' + urlImagen
 
         const modalDisplay = document.querySelector(".modal-container");
         modalDisplay.style.visibility = "visible";
@@ -718,16 +690,54 @@
       });
     }
 
+    /* función para compra por Whatsapp */
+    function contactoDeCompra() {
+      const comprasSeleccionadas = []
+      document.querySelectorAll('.carrito-detalles').forEach(el => { comprasSeleccionadas.push(el.textContent.trim().replace(/[\s\n]+/g, ' ')) })
+      console.log(comprasSeleccionadas)
+      const mensajeAEnviar = encodeURIComponent(`Hola! Estuve viendo tu página de cerámicas FNC y quisiera consultarte para comprar estas piezas: ${comprasSeleccionadas}`)
+      const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
+      window.open(whatsappUrl);
+    }
+
     /* funcion abrir carrito en click */
     const abrirCarrito = document.querySelector(".boton-carrito");
     abrirCarrito.addEventListener("click", () => {
-      const modalDisplay = document.querySelector(".carrito-container");
-      modalDisplay.style.visibility = "visible";
+      const carritoDisplay = document.querySelector(".carrito-container");
+      carritoDisplay.style.visibility = "visible";
+      const modalDisplay = document.querySelector(".modal-container");
+      modalDisplay.style.visibility = "hidden";
+
+      /* esto le da la posibilidad de borrado en cada botón eliminar de tus compras */
+      const botonesEliminar = document.querySelectorAll(".boton-eliminar");
+      for (let i = 0; i < botonesEliminar.length; i++) {
+        botonesEliminar[i].addEventListener("mouseenter", function () {
+          botonesEliminar[i].style.cursor = 'pointer';
+        });
+      }
+      function bajarNumeroCompra() {
+        const contadorProductos = document.querySelector(".bolita-compra");
+        contadorProductos.style.visibility = "visible";
+        contadorProductos.textContent = +contadorProductos.textContent - 1
+      }
+      for (let i = 0; i < botonesEliminar.length; i++) {
+        botonesEliminar[i].addEventListener("click", function () {
+          console.log(botonesEliminar[i].style)
+          const elementoABorrar = botonesEliminar[i].parentElement.parentElement
+          elementoABorrar.parentElement.removeChild(elementoABorrar)
+          bajarNumeroCompra()
+        });
+      }
     });
 
-    /* funcion cerrar carrito en click */
+    /* funcion cerrar carrito en click de botón cerrar o de "seguir viendo"*/
     const cerrarCarrito = document.querySelector(".cerrar-carrito");
     cerrarCarrito.addEventListener("click", () => {
+      const modalDisplay = document.querySelector(".carrito-container");
+      modalDisplay.style.visibility = "hidden";
+    });
+    const seguirViendo = document.querySelector(".seguir-viendo");
+    seguirViendo.addEventListener("click", () => {
       const modalDisplay = document.querySelector(".carrito-container");
       modalDisplay.style.visibility = "hidden";
     });
