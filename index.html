@@ -87,7 +87,8 @@
 
 
   <main>
-    <section class="grid-container">
+    <section class="shop-y-menu">
+
       <section class="menu-productos">
         <ul>
           <li class="menu">Todos</li>
@@ -104,6 +105,8 @@
         <h1 class="titulo titulo-s">SHOP</h1>
         <p class="parrafo parrafo-s">Selecciona el objeto para ver más detalles, agregar al carrito y consultar </p>
       </section>
+    </section>
+    <section class="grid-container">
 
 
       <section class="carrito-container">
@@ -116,7 +119,15 @@
         </div>
 
         <span class="total">Total:</span>
+
         <div class="boton-contenedor">
+          <select class="form-select envio eleccion-envio" required>
+            <option selected>ELEGIR ENVÍO</option>
+            <option value="España Peninsular">España Peninsular</option>
+            <option value="España Insular">España Insular</option>
+            <option value="Retiro Valencia (Gratis)">Retiro Valencia (Gratis)</option>
+            <option value="Otro lugar (aclarar en mensaje)">Otro lugar (aclarar en mensaje)</option>
+          </select>
           <button class="carrito-boton" onclick="contactoDeCompra()">CONCRETAR PEDIDO</button>
           <a class="seguir-viendo">SEGUIR VIENDO</a>
         </div>
@@ -143,15 +154,7 @@
               <div>
                 <select class="form-select envio" aria-label="Default select example">
                   <option selected>ELEGIR MODELO</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div>
-                <select class="form-select envio" aria-label="Default select example">
-                  <option selected>ELEGIR ENVÍO</option>
-                  <option value="1">One</option>
+                  <option value="1">One </option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
@@ -674,6 +677,7 @@
         modalDisplay.style.visibility = "visible";
       });
     }
+
     /* funcion elegir categoria en click */
     const opcionesMenu = document.querySelectorAll('.menu')
     function filtrarProductos(categoria) {
@@ -699,8 +703,16 @@
     function contactoDeCompra() {
       const comprasSeleccionadas = []
       document.querySelectorAll('.carrito-detalles').forEach(el => { comprasSeleccionadas.push(el.textContent.trim().replace(/[\s\n]+/g, ' ')) })
-      console.log(comprasSeleccionadas)
-      const mensajeAEnviar = encodeURIComponent(`Hola! Estuve viendo tu página de cerámicas FNC y quisiera consultarte para comprar estas piezas: ${comprasSeleccionadas}`)
+      if (comprasSeleccionadas.length === 0) {
+        return alert('No tienes compras seleccionadas aún!')
+      }
+      const opcionEnvio = document.querySelector('.eleccion-envio')?.value;
+      console.log(opcionEnvio)
+
+      if (opcionEnvio === 'ELEGIR ENVÍO') {
+        return alert("Por favor, elige una opción de envío.")
+      }
+      const mensajeAEnviar = encodeURIComponent(`Hola! Estuve viendo tu página de cerámicas FNC y quisiera consultarte para comprar estas piezas con envío en ${opcionEnvio}: ${comprasSeleccionadas}`)
       const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
       window.open(whatsappUrl);
     }
@@ -803,16 +815,21 @@
 
     /* función para que la lista de productos no siga scrolleando más allá de la parte shop */
     const listaProductos = document.querySelector('.menu-productos')
+    const textoShop = document.querySelector('.titulos-shop')
     const limiteProductos = document.querySelector('.titulos-nosotros')
     function actualizarPosicionDeListaDeShop() {
       const posicionActualDelScroll = window.scrollY || window.pageYOffset;
       const posicionObjetivoLimite = limiteProductos.getBoundingClientRect().top - 300 + posicionActualDelScroll;
       if (posicionActualDelScroll > posicionObjetivoLimite) {
         listaProductos.classList.remove('fade-in');
+        textoShop.classList.remove('fade-in');
         listaProductos.classList.add('fade-out');
+        textoShop.classList.add('fade-out');
       } else {
         listaProductos.classList.remove('fade-out');
+        textoShop.classList.remove('fade-out');
         listaProductos.classList.add('fade-in');
+        textoShop.classList.add('fade-in');
       }
     }
     window.addEventListener('scroll', actualizarPosicionDeListaDeShop);

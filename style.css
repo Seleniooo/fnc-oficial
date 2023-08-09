@@ -41,25 +41,23 @@ main {
   flex: 1;
 }
 
-.titulos-shop {
-  position: absolute;
-  margin-top: -91px;
-  margin-left: -42px;
-  z-index: -5;
+.shop-y-menu {
+  margin-top: 6em;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  position: fixed;
 }
-
 
 .grid-container {
   /*  display: grid;
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr; */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 15%;
-
-
 }
 
 
@@ -519,12 +517,20 @@ main {
   visibility: hidden;
 }
 
+.titulos-shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  margin-right: 1em;
+}
+
+.titulo-s {
+  text-align: center;
+}
 
 .menu-productos {
   z-index: 3;
-  position: fixed;
-  margin-left: -175px;
-  margin-top: -91px;
   color: #FFF;
   font-family: Roboto;
   font-size: 1rem;
@@ -546,6 +552,11 @@ main {
 
 /* 
 NOSOTROS */
+
+.titulos-nosotros {
+  margin-right: 1em;
+  text-align: right;
+}
 
 .nos-main {
   height: 200vh;
@@ -590,9 +601,6 @@ align-items: center;
   font-family: 'Almarai', sans-serif;
 }
 
-.titulo-s {
-  margin-left: 73vw;
-}
 
 .titulo {
   color: #000;
@@ -606,7 +614,8 @@ align-items: center;
 
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
 
   width: 40px;
   height: 120px;
@@ -626,30 +635,22 @@ align-items: center;
   width: 22.125rem;
   height: 3.6875rem;
   flex-shrink: 0;
-
-}
-
-.parrafo-s {
-  margin-left: 55vw;
 }
 
 .parrafo-n {
-  margin-left: 59vw;
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  width: 100%;
+  justify-content: right;
 }
 
 .parrafo-c {
-  margin-left: 59vw;
+  text-align: right;
+  width: 100%;
 }
 
-.titulo-p {
-  margin-left: 74vw;
-}
 
-.titulo-c {
-  /* position: absolute; */
-  margin-left: 70vw;
-  margin-top: -90px;
-}
 
 
 
@@ -734,15 +735,13 @@ align-items: center;
 
 /* contacto */
 .titulos-contacto {
-  position: absolute;
-
-
-}
-
-
-.form-contenedor {
-  /*   position: fixed; */
-  margin-top: -60vh !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: right;
+  width: 100%;
+  border-style: solid;
+  padding-right: 1em;
 }
 
 .box-title-contact img {
@@ -865,7 +864,8 @@ align-items: center;
 }
 
 .main-contacto {
-  /*  display: flex; */
+  display: flex;
+  flex-direction: column;
   margin-top: -250px;
   justify-content: center;
 }
@@ -910,12 +910,8 @@ align-items: center;
   height: 120px;
   min-width: 100%;
   width: 100%;
-  border-style: solid;
   box-sizing: border-box;
   margin-top: 700vh;
-
-
-
 }
 
 footer p {
@@ -1030,18 +1026,16 @@ footer p {
 
   .titulo-s {
     display: none;
-
   }
 
   .titulos-shop {
     display: none;
-
   }
 
   .parrafo-s {
     display: none;
-
   }
+
 
   .parrafo {
     width: 317px;
@@ -1060,7 +1054,6 @@ footer p {
   }
 
   .titulo-c {
-
     margin-left: 68vw;
     margin-top: -15vw;
   }
