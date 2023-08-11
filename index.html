@@ -118,7 +118,7 @@
           <h1>Carrito de compras</h1>
         </div>
 
-        <span class="total">Total:</span>
+        <span class="total">Total € <span class="valor-total">0</span></span>
 
         <div class="boton-contenedor">
           <select class="form-select envio eleccion-envio" required>
@@ -137,8 +137,19 @@
 
       <section class="modal-container">
         <section class="fotos-modal">
-          <div class="fotos-m">
-            <img id="fotos-producto" width="200px" src="./img/modal/foto-muestra.svg" alt="muestra-imagen" />
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </section>
         <section class="info-modal">
@@ -147,23 +158,12 @@
           <p class="precio" id="precio-producto"></p>
           <section>
             <section class="container-envio">
-              <!-- <div class="envio">
-            <div class="boton-drop-envio">Elegir envío</div>
-            <img src="./img/modal/flecha.svg" alt="flecha" />
-          </div> -->
-              <div>
-                <select class="form-select envio" aria-label="Default select example">
-                  <option selected>ELEGIR MODELO</option>
-                  <option value="1">One </option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
             </section>
             <div class="agregar-m">
               <button class="button-agregar-modal">AGREGAR</button>
 
-              <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"> o comprar
+              <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"> o
+                comprar
                 en AMAZON HANDMADE</a>
             </div>
           </section>
@@ -176,11 +176,19 @@
       </section>
       <div class="nube-1 nube-style" data-aos="fade-right" data-aos-duration="1400">
         <button class="boton-producto">
-          <span class="titulo-producto"> Bowlsitos en chanclas 😍 </span>
+          <span class="titulo-producto"> Bowlsitos en chanclas amarillos 😍 </span>
           <span class="precio-producto"> 30 </span>
           <span class="detalles-producto">
             Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
           </span>
+
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto3.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
+          <span class="opciones">Amarillito €40</span>
+          <span class="opciones">Negrito €30</span>
         </button>
       </div>
 
@@ -193,15 +201,24 @@
             distraído XD
             15 cm x 15 cm
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
       <div class="nube-3 nube-style" data-aos="fade-left" data-aos-duration="1900">
         <button class="boton-producto">
-          <span class="titulo-producto"> Bowlsitos en chanclas 😍 </span>
+          <span class="titulo-producto"> Bowlsito blanco en chanclas 😍 </span>
           <span class="precio-producto"> 30 </span>
           <span class="detalles-producto">
             Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-4 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
@@ -214,6 +231,8 @@
             Es un dulse dulse perrito que se puso el buzo de Barbie por el calor
             :D
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
       <div class="nube-5 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
@@ -224,15 +243,24 @@
             Se suben una encima de la otra, a las Tasitas les gustan los totem!
             🧗‍♀️
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-6 nube-style" data-aos="fade-left" data-aos-duration="1900">
         <button class="boton-producto">
-          <span class="titulo-producto"> Bowlsitos en chanclas 😍 </span>
+          <span class="titulo-producto"> Amigos bowlsitos en chanclas 😍 </span>
           <span class="precio-producto"> 30 </span>
           <span class="detalles-producto">
             Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
+          <span class="opciones">Awelito Dulse €34</span>
+          <span class="opciones">Cachorro Enamorado €12</span>
         </button>
       </div>
       <div class="nube-7 nube-style" data-aos="fade-left" data-aos-duration="1900">
@@ -242,6 +270,10 @@
           <span class="detalles-producto">
             Ta triste porque el viento la llevó al país de la azulina
           </span>
+
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-8 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
@@ -251,6 +283,11 @@
           <span class="detalles-producto">
             En medio del sueño, el watito espera en la habitación lunar
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
       <div class="nube-9 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
@@ -260,6 +297,11 @@
           <span class="detalles-producto">
             ¿Qué cosas habrá dentro de la casa del watito negro?
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto3.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-10 nube-style" data-aos="fade-right" data-aos-duration="1900">
@@ -269,6 +311,11 @@
           <span class="detalles-producto">
             Colorido y cálido por fuera, fresco y oscuro por dentro
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
       <div class="nube-11 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
@@ -278,6 +325,11 @@
           <span class="detalles-producto">
             ¡Cuando las mediecitas de un gemelo son muy bonitas, el otro gemelito mira de reojo!
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto3.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-12 nube-style" data-aos="fade-left" data-aos-duration="1900">
@@ -285,8 +337,13 @@
           <span class="titulo-producto"> Sillón abandonado </span>
           <span class="precio-producto"> 35 </span>
           <span class="detalles-producto">
-            Alguien se despertó de un sueño y fue a tomar un vaso de agua. Aún se ven las arrugas de la manta confundida
+            Alguien se despertó de un sueño y fue a tomar un vaso de agua. Aún se ven las arrugas de la manta
+            confundida
           </span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
 
@@ -297,6 +354,11 @@
           <span class="detalles-producto">
             No tiene materiales tóxicos, pero da toda la idea...
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto3.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-14 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
@@ -306,6 +368,11 @@
           <span class="detalles-producto">
             Motivos del sweater para mirar y sentirse abrigad@ 🧥
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
       <div class="nube-15 nube-style" data-aos="fade-left" data-aos-duration="1900">
@@ -315,6 +382,11 @@
           <span class="detalles-producto">
             Escultura de bolsa con motivos de escultura pero para una bolsa :D
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto3.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-16 nube-style" data-aos="fade-right" data-aos-duration="1900">
@@ -324,6 +396,11 @@
           <span class="detalles-producto">
             Dos piezas individuales. A saber: el sillón siestero del perrito y el perrito siestero
           </span>
+          <span class="fotos-producto">./img/productos/producto6.svg</span>
+          <span class="fotos-producto">./img/productos/producto7.svg</span>
+          <span class="fotos-producto">./img/productos/producto8.svg</span>
+          <span class="fotos-producto">./img/productos/producto9.svg</span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
 
@@ -334,6 +411,11 @@
           <span class="detalles-producto">
             Aún no subimos nada para esta nubecita, ¡pero puede pasar!
           </span>
+          <span class="fotos-producto">./img/productos/producto1.svg</span>
+          <span class="fotos-producto">./img/productos/producto2.svg</span>
+          <span class="fotos-producto">./img/productos/producto3.svg</span>
+          <span class="fotos-producto">./img/productos/producto4.svg</span>
+          <span class="fotos-producto">./img/productos/producto5.svg</span>
         </button>
       </div>
       <div class="nube-18 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
@@ -343,6 +425,7 @@
           <span class="detalles-producto">
             Miniatura de un sillón con algunos siglos de vida
           </span>
+          <span class="fotos-producto">./img/productos/producto10.svg</span>
         </button>
       </div>
 
@@ -620,19 +703,33 @@
     /* funcion agregar compra en click */
     const agregarProductoModal = document.querySelector(".button-agregar-modal");
     agregarProductoModal.addEventListener("click", () => {
+      const precio = document.querySelector("#precio-producto").textContent.split('€')[1];
+      if (!precio) {
+        return alert('debes seleccionar un modelo')
+      }
       const contadorProductos = document.querySelector(".bolita-compra");
+      const precioTotalProductos = document.querySelector(".valor-total");
       contadorProductos.style.visibility = "visible";
       contadorProductos.textContent = +contadorProductos.textContent + 1
-      const titulo = document.querySelector("#nombre-producto").textContent;
-      const precio = document.querySelector("#precio-producto").textContent;
-      const detalle = document.querySelector("#detalle-producto").textContent;
-      const imagen = document.querySelector('#fotos-producto').src
-      añadirProductoACarrito(titulo, precio, imagen)
+      let titulo = document.querySelector("#nombre-producto").textContent;
 
+      const detalle = document.querySelector("#detalle-producto").textContent;
+      let imagenesRuta = document.querySelector('.carousel-inner').firstChild.querySelector('img').src.split('/').pop()
+      imagenesRuta = imagenesRuta.split('.')[0].split('producto')[1]
+      const nubeEncontrada = document.querySelector(`.nube-${imagenesRuta}`)
+      const imagenCapturada = window.getComputedStyle(nubeEncontrada).getPropertyValue('background-image');
+      const urlImagen = 'img' + imagenCapturada.split('img')[1]
+      const imagen = urlImagen.slice(0, -2)
+      precioTotalProductos.textContent = +precioTotalProductos.textContent + +precio
+      const opcionSeleccionada = document.querySelector('#opciones-producto')
+      if (opcionSeleccionada) {
+        titulo = `${titulo} opción ${opcionSeleccionada.value}`
+      }
+      añadirProductoACarrito(titulo, precio, imagen)
     });
     function añadirProductoACarrito(titulo, precio, imagen) {
       var myDiv = document.querySelector('.carrito-container');
-      var newSection = document.createElement('section');
+      const newSection = document.createElement('section');
       newSection.innerHTML = `<section class="carrito-detalles">
         <div class="foto-carrito">
           <img src="${imagen}" width="100px" alt="imagen producto">
@@ -640,14 +737,14 @@
         <div class="texto-carrito">
           <p class="nombre-prod"> ${titulo}</p>
           <br>
-          <p class="precio-prod">${precio}</p>
+          <p class="precio-prod">€ ${precio}</p>
         </div>
         <div class="icono-eliminar">
           <img class="boton-eliminar" src="./img/carrito/basura.svg" alt="borrar producto">
         </div>
       </section>`;
       // Get the third child of myDiv
-      var thirdChild = myDiv.children[2];
+      const thirdChild = myDiv.children[2];
       // Insert the new section before the third child
       myDiv.insertBefore(newSection, thirdChild);
     }
@@ -662,17 +759,52 @@
         }
         const titulo = this.querySelector(".titulo-producto").textContent;
         const precio = this.querySelector(".precio-producto").textContent;
-        const detalle = this.querySelector(".detalles-producto").textContent;
-        const capturadorDeImagen = document.querySelector(`.${mostrarModal[i].parentElement.classList[0].split(' ')[0]}`)
-        const imagenCapturada = window.getComputedStyle(capturadorDeImagen).getPropertyValue('background-image');
-        const urlImagen = imagenCapturada.split('/').pop().slice(0, -2)
-
+        const detalle = this.querySelector(".detalles-producto").textContent
+        const fotos = this.querySelectorAll(".fotos-producto")
+        const carruselContenedorDeFotos = document.querySelector('.carousel-inner')
+        while (carruselContenedorDeFotos.firstChild) {
+          carruselContenedorDeFotos.removeChild(carruselContenedorDeFotos.firstChild);
+        }
+        for (let index = 0; index < fotos.length; index++) {
+          const divDeFoto = document.createElement('div');
+          if (index === 0) {
+            divDeFoto.className = 'carousel-item active';
+          }
+          else {
+            divDeFoto.className = 'carousel-item';
+          }
+          divDeFoto.innerHTML = `
+            <img src="${fotos[index].textContent}" class="d-block w-100" alt="${fotos[index].textContent.split('/').pop()}">
+        `;
+          carruselContenedorDeFotos.appendChild(divDeFoto)
+        }
+        const opciones = []
+        this.querySelectorAll('.opciones').forEach(el => { opciones.push(el.textContent) })
         document.querySelector("#nombre-producto").textContent = titulo;
         document.querySelector("#precio-producto").textContent = "€" + precio;
         document.querySelector("#detalle-producto").textContent = detalle;
-        const foto = document.querySelector("#fotos-producto")
-        foto.src = './img/productos/' + urlImagen
-
+        if (opciones.length !== 0) {
+          const precio = document.querySelector("#precio-producto")
+          precio.textContent = "Elegir modelo"
+          let innerHTMLOpciones = ''
+          for (let index = 0; index < opciones.length; index++) {
+            innerHTMLOpciones += `<option value="${opciones[index]}">${opciones[index]} </option>`
+          }
+          const childDetalle = document.querySelector("#detalle-producto")
+          const divOpciones = document.createElement('div');
+          divOpciones.innerHTML = `
+            <select id="opciones-producto" class="form-select envio" required aria-label="Default select example">
+              <option disabled selected>ELEGIR MODELO</option>
+              ${innerHTMLOpciones}
+            </select>
+          `;
+          childDetalle.appendChild(divOpciones)
+          const selectOpciones = document.querySelector("#opciones-producto")
+          selectOpciones.addEventListener('change', function () {
+            const precio = document.querySelector("#precio-producto")
+            precio.textContent = "€ " + selectOpciones.value.split('€')[1]
+          });
+        }
         const modalDisplay = document.querySelector(".modal-container");
         modalDisplay.style.visibility = "visible";
       });
@@ -707,8 +839,6 @@
         return alert('No tienes compras seleccionadas aún!')
       }
       const opcionEnvio = document.querySelector('.eleccion-envio')?.value;
-      console.log(opcionEnvio)
-
       if (opcionEnvio === 'ELEGIR ENVÍO') {
         return alert("Por favor, elige una opción de envío.")
       }
@@ -732,17 +862,20 @@
           botonesEliminar[i].style.cursor = 'pointer';
         });
       }
-      function bajarNumeroCompra() {
+      function bajarNumeroCompra(precioABajar) {
         const contadorProductos = document.querySelector(".bolita-compra");
+        const precioTotalProductos = document.querySelector(".valor-total");
+        const precio = precioABajar.split('€')[1];
+        precioTotalProductos.textContent = +precioTotalProductos.textContent - +precio
         contadorProductos.style.visibility = "visible";
         contadorProductos.textContent = +contadorProductos.textContent - 1
       }
       for (let i = 0; i < botonesEliminar.length; i++) {
         botonesEliminar[i].addEventListener("click", function () {
-          console.log(botonesEliminar[i].style)
           const elementoABorrar = botonesEliminar[i].parentElement.parentElement
           elementoABorrar.parentElement.removeChild(elementoABorrar)
-          bajarNumeroCompra()
+          precioAQuitar = elementoABorrar.querySelector('.precio-prod').textContent
+          bajarNumeroCompra(precioAQuitar)
         });
       }
     });
@@ -766,20 +899,7 @@
       window.open(whatsappUrl);
     }
 
-    /* función para contacto por mail */
-    async function enviarMail(nombre, mensaje, email) {
-      await emailjs.send(
-        'service_363or5n',
-        'template_ulhiyc8',
-        {
-          from_name: nombre,
-          to_name: 'FNC',
-          message: `${nombre} con el mail ${email}, te envió este mensaje: ${mensaje}`,
-          reply_to: email
-        },
-        'fjQ8S9HQVsvmN9doG'
-      )
-    }
+    /* funciónes para contacto por mail */
     function enviarMensajeContacto() {
       const emailContacto = document.querySelector('#email')
       const nombreContacto = document.querySelector('#name')
@@ -799,6 +919,19 @@
         alert('error al enviar email, por favor intenta contactarnos por otro medio')
         console.log(error)
       }
+    }
+    async function enviarMail(nombre, mensaje, email) {
+      await emailjs.send(
+        'service_363or5n',
+        'template_ulhiyc8',
+        {
+          from_name: nombre,
+          to_name: 'FNC',
+          message: `${nombre} con el mail ${email}, te envió este mensaje: ${mensaje}`,
+          reply_to: email
+        },
+        'fjQ8S9HQVsvmN9doG'
+      )
     }
 
 
@@ -833,7 +966,10 @@
       }
     }
     window.addEventListener('scroll', actualizarPosicionDeListaDeShop);
+
+    /* fin de script con funciones nativas :)) */
   </script>
+
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     emailjs.init("YOUR_EMAILJS_USER_ID");

@@ -81,23 +81,16 @@ main {
 
 .nube-3 {
   margin-top: -2%;
-
   background-image: url('./img/productos/producto3.svg');
-
 }
 
 .nube-4 {
-
   margin-top: 12%;
-
   background-image: url('./img/productos/producto4.svg');
-
 }
 
 .nube-5 {
-
   background-image: url('./img/productos/producto5.svg');
-
 }
 
 .nube-6 {
@@ -526,7 +519,7 @@ main {
 }
 
 .titulo-s {
-  text-align: center;
+  text-align: right;
 }
 
 .menu-productos {
@@ -559,7 +552,7 @@ NOSOTROS */
 }
 
 .nos-main {
-  height: 200vh;
+  height: 130vh;
   width: auto;
 }
 
@@ -740,7 +733,6 @@ align-items: center;
   flex-wrap: wrap;
   text-align: right;
   width: 100%;
-  border-style: solid;
   padding-right: 1em;
 }
 
