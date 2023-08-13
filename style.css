@@ -565,7 +565,6 @@ NOSOTROS */
 }
 
 .nos-main {
-  height: 130vh;
   width: auto;
 }
 
@@ -887,7 +886,7 @@ align-items: center;
 .main-contacto {
   display: flex;
   flex-direction: column;
-  margin-top: -650px;
+  margin-top: 5em;
   justify-content: center;
 }
 
