@@ -10,8 +10,6 @@
   --fondoForm: rgba(255, 255, 255, 0.4);
   --violeta: rgba(96, 40, 255, 0.80);
   --rosa: #CB37E3;
-
-
 }
 
 /* fondo */
@@ -177,6 +175,10 @@ main {
 
 /* navvar */
 
+.secciones-navbar-normal {
+  display: flex;
+}
+
 .nav-style {
   /*  display: flex !important;
     justify-content: space-between !important; */
@@ -226,18 +228,18 @@ main {
 
 }
 
-.nav-link-n:hover {
+.nav-link:hover {
   cursor: pointer;
   color: inherit;
   text-decoration: none;
 }
 
-.nav-link-n:link {
+.nav-link:link {
   color: inherit;
   text-decoration: none;
 }
 
-.nav-link-n:visited {
+.nav-link:visited {
   color: inherit;
   text-decoration: none;
 }
@@ -251,6 +253,17 @@ main {
 
 
 .bolita-compra {
+  background-color: #dd8b2dee;
+  visibility: hidden;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 10px;
+  text-align: center;
+}
+
+.bolita-compra-mobile {
   background-color: #dd8b2dee;
   visibility: hidden;
   width: 12px;

@@ -22,23 +22,23 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary nav-style normal-display">
     <div class="container-fluid container-fluid-s">
 
-      <div id="navbarNavDropdown">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div>
+        <ul class="secciones-navbar-normal">
 
-          <li class="nav-item">
-            <a class="nav-link nav-link-n active" aria-current="page" href="#">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-n" onclick="scrollero('.titulos-nosotros')">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class=" nav-link nav-link-n" onclick="scrollero('.titulos-contacto')">Contacto</a>
-          </li>
+
+          <a class="nav-link nav-link-n active" aria-current="page" href="#">Shop</a>
+
+
+          <a class="nav-link nav-link-n" onclick="scrollero('.titulos-nosotros')">Nosotros</a>
+
+
+          <a class="nav-link nav-link-n" onclick="scrollero('.titulos-contacto')">Contacto</a>
+
         </ul>
       </div>
       <div><img src="./img/logo.svg" alt="" /></div>
 
-      <div class="boton-carrito"><img src="./img/carrito.svg" alt="" />
+      <div class="boton-carrito"><img src="./img/carrito.svg" alt="imagen carrito" />
         <div class="bolita-compra">0</div>
       </div>
     </div>
@@ -53,10 +53,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div><img src="./img/logo.svg" alt="" /></div>
+      <div><img src="./img/logo.svg" alt="logo FNC" /></div>
 
-      <div><img src="./img/carrito.svg" alt="" />
-        <div class="bolita-compra">0</div>
+      <div class="boton-carrito"><img src="./img/carrito.svg" alt="imagen carrito" />
+        <div class="bolita-compra-mobile">0</div>
       </div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -72,13 +72,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+            <a class="nav-link active" aria-current="page" href="#">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" aria-current="page" onclick="scrollero('.titulos-nosotros')">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Eventos</a>
+            <a class="nav-link" onclick="scrollero('.titulos-contacto')">Contacto</a>
           </li>
         </ul>
       </div>
@@ -110,12 +110,12 @@
 
 
       <section class="carrito-container">
-        <div class="cerrar-carrito">
-          <img src="./img/carrito/equis-cerrar.svg" alt="cerrar carrito">
-        </div>
         <div class="carrito-titulo">
           <img src="./img/carrito.svg" alt="">
-          <h1>Carrito de compras</h1>
+          <span>Carrito de compras</span>
+          <div class="cerrar-carrito">
+            <img src="./img/carrito/equis-cerrar.svg" alt="cerrar carrito">
+          </div>
         </div>
 
         <span class="total">Total € <span class="valor-total">0</span></span>
@@ -718,9 +718,12 @@
         return alert('debes seleccionar un modelo')
       }
       const contadorProductos = document.querySelector(".bolita-compra");
+      const contadorProductosMobile = document.querySelector(".bolita-compra-mobile");
       const precioTotalProductos = document.querySelector(".valor-total");
       contadorProductos.style.visibility = "visible";
+      contadorProductosMobile.style.visibility = "visible";
       contadorProductos.textContent = +contadorProductos.textContent + 1
+      contadorProductosMobile.textContent = +contadorProductosMobile.textContent + 1
       let titulo = document.querySelector("#nombre-producto").textContent;
 
       const detalle = document.querySelector("#detalle-producto").textContent;
@@ -858,37 +861,41 @@
     }
 
     /* funcion abrir carrito en click */
-    const abrirCarrito = document.querySelector(".boton-carrito");
-    abrirCarrito.addEventListener("click", () => {
-      const carritoDisplay = document.querySelector(".carrito-container");
-      carritoDisplay.style.visibility = "visible";
-      const modalDisplay = document.querySelector(".modal-container");
-      modalDisplay.style.visibility = "hidden";
+    const abrirCarrito = document.querySelectorAll(".boton-carrito");
+    for (let carritoAbierto of abrirCarrito) {
+      carritoAbierto.addEventListener("click", () => {
+        const carritoDisplay = document.querySelector(".carrito-container");
+        carritoDisplay.style.visibility = "visible";
+        const modalDisplay = document.querySelector(".modal-container");
+        modalDisplay.style.visibility = "hidden";
 
-      /* esto le da la posibilidad de borrado en cada botón eliminar de tus compras */
-      const botonesEliminar = document.querySelectorAll(".boton-eliminar");
-      for (let i = 0; i < botonesEliminar.length; i++) {
-        botonesEliminar[i].addEventListener("mouseenter", function () {
-          botonesEliminar[i].style.cursor = 'pointer';
-        });
-      }
-      function bajarNumeroCompra(precioABajar) {
-        const contadorProductos = document.querySelector(".bolita-compra");
-        const precioTotalProductos = document.querySelector(".valor-total");
-        const precio = precioABajar.split('€')[1];
-        precioTotalProductos.textContent = +precioTotalProductos.textContent - +precio
-        contadorProductos.style.visibility = "visible";
-        contadorProductos.textContent = +contadorProductos.textContent - 1
-      }
-      for (let i = 0; i < botonesEliminar.length; i++) {
-        botonesEliminar[i].addEventListener("click", function () {
-          const elementoABorrar = botonesEliminar[i].parentElement.parentElement
-          elementoABorrar.parentElement.removeChild(elementoABorrar)
-          precioAQuitar = elementoABorrar.querySelector('.precio-prod').textContent
-          bajarNumeroCompra(precioAQuitar)
-        });
-      }
-    });
+        /* esto le da la posibilidad de borrado en cada botón eliminar de tus compras */
+        const botonesEliminar = document.querySelectorAll(".boton-eliminar");
+        for (let i = 0; i < botonesEliminar.length; i++) {
+          botonesEliminar[i].addEventListener("mouseenter", function () {
+            botonesEliminar[i].style.cursor = 'pointer';
+          });
+        }
+        function bajarNumeroCompra(precioABajar) {
+          const contadorProductos = document.querySelector(".bolita-compra");
+          const contadorProductosMobile = document.querySelector(".bolita-compra-mobile");
+          const precioTotalProductos = document.querySelector(".valor-total");
+          const precio = precioABajar.split('€')[1];
+          precioTotalProductos.textContent = +precioTotalProductos.textContent - +precio
+          contadorProductos.style.visibility = "visible";
+          contadorProductos.textContent = +contadorProductos.textContent - 1
+          contadorProductosMobile.textContent = +contadorProductosMobile.textContent - 1
+        }
+        for (let i = 0; i < botonesEliminar.length; i++) {
+          botonesEliminar[i].addEventListener("click", function () {
+            const elementoABorrar = botonesEliminar[i].parentElement.parentElement
+            elementoABorrar.parentElement.removeChild(elementoABorrar)
+            precioAQuitar = elementoABorrar.querySelector('.precio-prod').textContent
+            bajarNumeroCompra(precioAQuitar)
+          });
+        }
+      });
+    }
 
     /* funcion cerrar carrito en click de botón cerrar o de "seguir viendo"*/
     const cerrarCarrito = document.querySelector(".cerrar-carrito");
