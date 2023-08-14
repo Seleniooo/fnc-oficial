@@ -396,14 +396,11 @@ main {
   justify-content: center;
 }
 
-.envio2 {
+.menu-mobile {
   margin-top: 115px;
   position: relative;
   display: flex;
-  /*  justify-content: center; */
   align-items: center;
-
-  /* margin: 0.5rem !important; */
   width: 192px;
   height: 40.957px;
   flex-shrink: 0;
@@ -416,7 +413,6 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 13.055px;
-  /* 108.795% */
   letter-spacing: 3.723px;
 }
 
@@ -535,7 +531,7 @@ main {
 
 .boton-producto {
   background: none;
-  border: none;
+  border-style: solid;
   width: var(--desktop-prod-width);
   height: var(--desktop-prod-height);
 
@@ -1207,9 +1203,19 @@ footer p {
 }
 
 @media only screen and (min-width:961px) {
-
-
-  .envio2 {
+  .selector-mobil {
     display: none;
+  }
+}
+
+@media only screen and (max-width:961px) {
+  .menu-productos {
+    display: none;
+  }
+
+  .titulos-shop {
+    text-align: right;
+    align-items: flex-end;
+    width: 100%;
   }
 }

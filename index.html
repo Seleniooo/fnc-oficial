@@ -89,14 +89,14 @@
   <main>
 
     <div class="selector-mobil">
-      <select id="" class="envio2" required="" aria-label="Default select example">
-        <option disabled="" selected="">PRODUCTOS</option>
-        <option value="">Todos </option>
-        <option value="">Bowls </option>
-        <option value="">Contenedores </option>
-        <option value="">Floreros </option>
-        <option value="">Tazas</option>
-        <option value="">Miniaturas </option>
+      <select id="" class="menu-mobile" required="" aria-label="Default select example">
+        <option disabled selected>PRODUCTOS</option>
+        <option value="Todos">Todos </option>
+        <option value="Bowls">Bowls </option>
+        <option value="Contenedores">Contenedores </option>
+        <option value="Floreros">Floreros </option>
+        <option value="Tazas">Tazas</option>
+        <option value="Miniaturas">Miniaturas </option>
       </select>
     </div>
 
@@ -747,9 +747,9 @@
       let titulo = document.querySelector("#nombre-producto").textContent;
 
       const detalle = document.querySelector("#detalle-producto").textContent;
-      let imagenesRuta = document.querySelector('.carousel-inner').firstChild.querySelector('img').src.split('/').pop()
-      imagenesRuta = imagenesRuta.split('.')[0].split('producto')[1]
-      const nubeEncontrada = document.querySelector(`.nube-${imagenesRuta}`)
+      let imagenesRuta = document.querySelector('.carousel-inner').firstChild.querySelector('img').src
+      imagenesRuta = imagenesRuta.split('prod-')[1].split('/')[0]
+      const nubeEncontrada = document.querySelector(`.nube-${+imagenesRuta.toString()}`)
       const imagenCapturada = window.getComputedStyle(nubeEncontrada).getPropertyValue('background-image');
       const urlImagen = 'img' + imagenCapturada.split('img')[1]
       const imagen = urlImagen.slice(0, -2)
@@ -845,6 +845,7 @@
 
     /* funcion elegir categoria en click */
     const opcionesMenu = document.querySelectorAll('.menu')
+    const opcionesMenuMobile = document.querySelector('.menu-mobile')
     function filtrarProductos(categoria) {
       document.querySelectorAll('.nube-style').forEach(el => {
         el.style.filter = "none"
@@ -863,6 +864,11 @@
         filtrarProductos(categoriasEnum[(opcionesMenu[i].textContent).toLowerCase()])
       });
     }
+
+    opcionesMenuMobile.addEventListener("change", function () {
+      console.log('ola', opcionesMenuMobile.value)
+      filtrarProductos(categoriasEnum[(opcionesMenuMobile.value).toLowerCase()])
+    });
 
     /* función para compra por Whatsapp */
     function contactoDeCompra() {
