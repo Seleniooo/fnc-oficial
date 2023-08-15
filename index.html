@@ -207,8 +207,8 @@
           <span class="fotos-producto">./img/productos/carousel/prod-01/0103.svg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-01/0104.svg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-01/0105.svg</span>
-          <span class="opciones">Amarillito €40</span>
-          <span class="opciones">Negrito €30</span>
+          <span class="opciones">Uno solito €40</span>
+          <span class="opciones">Los dos juntitos €70</span>
         </button>
       </div>
 
@@ -274,6 +274,12 @@
           <span class="fotos-producto">./img/productos/carousel/prod-05/07.svg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-05/08.svg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-05/09.svg</span>
+          <span class="opciones">Familia Tasitas de 3 €62</span>
+          <span class="opciones">Tasita llora llora €34</span>
+          <span class="opciones">Familia Tasitas completa €142</span>
+          <span class="opciones">Doña Tasita Amarillita €32</span>
+          <span class="opciones">Doña Tasita Blankita €32</span>
+          <span class="opciones">Doña Tasita Berdesita €32</span>
 
         </button>
       </div>
@@ -291,8 +297,8 @@
           <span class="fotos-producto">./img/productos/carousel/prod-06/05.svg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-06/06.svg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-06/07.svg</span>
-          <span class="opciones">Awelito Dulse €34</span>
-          <span class="opciones">Cachorro Enamorado €12</span>
+          <span class="opciones">Morenito travieso €34</span>
+          <span class="opciones">Amarillito juguetón €34</span>
         </button>
       </div>
       <div class="nube-7 nube-style" data-aos="fade-left" data-aos-duration="1900">
@@ -994,19 +1000,24 @@
     const listaProductos = document.querySelector('.menu-productos')
     const textoShop = document.querySelector('.titulos-shop')
     const limiteProductos = document.querySelector('.titulos-nosotros')
+    const modalProducto = document.querySelector('.modal-container')
     function actualizarPosicionDeListaDeShop() {
       const posicionActualDelScroll = window.scrollY || window.pageYOffset;
       const posicionObjetivoLimite = limiteProductos.getBoundingClientRect().top - 300 + posicionActualDelScroll;
       if (posicionActualDelScroll > posicionObjetivoLimite) {
         listaProductos.classList.remove('fade-in');
         textoShop.classList.remove('fade-in');
+        modalProducto.classList.remove('fade-in');
         listaProductos.classList.add('fade-out');
         textoShop.classList.add('fade-out');
+        modalProducto.classList.add('fade-out');
       } else {
         listaProductos.classList.remove('fade-out');
         textoShop.classList.remove('fade-out');
+        modalProducto.classList.remove('fade-out');
         listaProductos.classList.add('fade-in');
         textoShop.classList.add('fade-in');
+        modalProducto.classList.add('fade-in');
       }
     }
     window.addEventListener('scroll', actualizarPosicionDeListaDeShop);
