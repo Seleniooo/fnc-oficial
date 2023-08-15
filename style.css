@@ -39,6 +39,12 @@ main {
   flex: 1;
 }
 
+
+.separador {
+
+  height: 100px;
+}
+
 .shop-y-menu {
   margin-top: 6em;
   display: flex;
@@ -531,10 +537,9 @@ main {
 
 .boton-producto {
   background: none;
-  border-style: solid;
   width: var(--desktop-prod-width);
   height: var(--desktop-prod-height);
-
+  border: none;
 
 }
 
@@ -751,7 +756,7 @@ align-items: center;
 
 }
 
-.fondo-6 {
+/* .fondo-6 {
   position: absolute;
   margin-top: 1402px;
   margin-left: 300px;
@@ -761,7 +766,7 @@ align-items: center;
   height: 203.96168px;
   background-size: contain;
 
-}
+} */
 
 .nuve {
   background-repeat: no-repeat;
@@ -944,7 +949,6 @@ align-items: center;
   justify-content: space-around;
   position: fixed;
   min-width: 100%;
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
