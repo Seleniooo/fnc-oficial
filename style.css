@@ -973,7 +973,10 @@ footer p {
   left: 90%;
   letter-spacing: 0.135em;
   color: rgba(101, 100, 100, 0.925);
+}
 
+.creditos:hover {
+  cursor: pointer;
 }
 
 .links-footer-desktop {
