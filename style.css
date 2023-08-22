@@ -1036,6 +1036,14 @@ footer p {
   .normal-display {
     display: none !important;
   }
+
+  .links-footer-mobile {
+    display: flex !important;
+  }
+
+  .links-footer-desktop {
+    display: none;
+  }
 }
 
 /* MOBILE */
