@@ -1003,31 +1003,6 @@
       });
     }
 
-    /* función para que la lista de productos no siga scrolleando más allá de la parte shop */
-    const listaProductos = document.querySelector('.menu-productos')
-    const textoShop = document.querySelector('.titulos-shop')
-    const limiteProductos = document.querySelector('.titulos-nosotros')
-    const modalProducto = document.querySelector('.modal-container')
-    function actualizarPosicionDeListaDeShop() {
-      const posicionActualDelScroll = window.scrollY || window.pageYOffset;
-      const posicionObjetivoLimite = limiteProductos.getBoundingClientRect().top - 300 + posicionActualDelScroll;
-      if (posicionActualDelScroll > posicionObjetivoLimite) {
-        listaProductos.classList.remove('fade-in');
-        textoShop.classList.remove('fade-in');
-        modalProducto.classList.remove('fade-in');
-        listaProductos.classList.add('fade-out');
-        textoShop.classList.add('fade-out');
-        modalProducto.classList.add('fade-out');
-      } else {
-        listaProductos.classList.remove('fade-out');
-        textoShop.classList.remove('fade-out');
-        modalProducto.classList.remove('fade-out');
-        listaProductos.classList.add('fade-in');
-        textoShop.classList.add('fade-in');
-        modalProducto.classList.add('fade-in');
-      }
-    }
-    window.addEventListener('scroll', actualizarPosicionDeListaDeShop);
 
     /* fin de script con funciones nativas :)) */
   </script>
