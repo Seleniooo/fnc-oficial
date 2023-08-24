@@ -507,6 +507,12 @@ main {
   margin-right: 8px;
   margin-top: 8px;
   margin-left: -47px;
+
+}
+
+.button-cerrar-modal {
+  background: none;
+  border-style: none;
 }
 
 /* .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -1053,6 +1059,9 @@ footer p {
 /* MOBILE */
 
 @media only screen and (max-width:500px) {
+  .fotos-modal {
+    margin-top: -178px;
+  }
 
   .nube-style {
     width: 150px;
@@ -1063,7 +1072,13 @@ footer p {
     display: none;
   }
 
+  .button-cerrar-modal img {
+    position: absolute;
+    margin-top: -489px;
+    margin-left: 398px;
+    z-index: 10;
 
+  }
 
   .grid-container {
     justify-content: space-between;
@@ -1080,8 +1095,8 @@ footer p {
   .modal-container {
     flex-direction: column;
     justify-content: center;
-    width: 478px;
-    height: 686px;
+    width: 401px;
+    height: 689px;
   }
 
   .fotos-m {
@@ -1210,7 +1225,37 @@ footer p {
     width: 70%;
   }
 
+  .button-agregar-modal {
+    position: absolute;
+    margin-bottom: -287px;
 
+  }
+
+  .agregar-m button {
+    width: 373px;
+  }
+
+  .agregar-m a {
+    margin-bottom: -364px;
+  }
+
+  .info-modal p {
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+
+
+  .info-modal .precio {
+    position: absolute;
+    margin-top: 247px;
+    margin-left: 173px;
+
+  }
+
+  .carousel-control-next-icon {
+    margin-left: -6px;
+  }
 
 }
 
