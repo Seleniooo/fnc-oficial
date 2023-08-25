@@ -503,13 +503,14 @@ main {
   margin-right: 8px;
   margin-top: 8px;
   margin-left: -47px;
-
 }
 
 .button-cerrar-modal {
   background: none;
   border-style: none;
+
 }
+
 
 /* .carousel-control-next-icon, .carousel-control-prev-icon {
   width: 40px;
@@ -1244,6 +1245,17 @@ footer p {
   }
 
 
+
+  .info-modal .precio {
+    position: absolute;
+    margin-top: 247px;
+    margin-left: 173px;
+
+  }
+
+  .carousel-control-next-icon {
+    margin-left: -6px;
+  }
 
   .info-modal .precio {
     position: absolute;
