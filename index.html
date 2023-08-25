@@ -88,6 +88,50 @@
 
   <main>
 
+    <section class="modal-container">
+      <div class="contenedor-flex-modal">
+
+
+        <section class="fotos-modal">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <section class="info-modal">
+          <h1 id="nombre-producto"></h1>
+          <p class="detalles" id="detalle-producto"></p>
+          <p class="precio" id="precio-producto"></p>
+          <section>
+            <section class="container-envio">
+            </section>
+            <div class="agregar-m">
+              <button class="button-agregar-modal">AGREGAR</button>
+
+              <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"> o
+                comprar
+                en AMAZON HANDMADE</a>
+            </div>
+          </section>
+        </section>
+        <section class="cerrar-modal">
+          <button class="button-cerrar-modal">
+            <img src="./img/modal/close-modal.svg" alt="cruz-cierre" />
+          </button>
+        </section>
+      </div>
+    </section>
+
     <div class="selector-mobil">
       <select id="" class="menu-mobile" required="" aria-label="Default select example">
         <option disabled selected>PRODUCTOS</option>
@@ -155,45 +199,7 @@
       </section>
 
 
-      <section class="modal-container">
-        <section class="fotos-modal">
-          <div id="carouselExampleFade" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section>
-        <section class="info-modal">
-          <h1 id="nombre-producto"></h1>
-          <p class="detalles" id="detalle-producto"></p>
-          <p class="precio" id="precio-producto"></p>
-          <section>
-            <section class="container-envio">
-            </section>
-            <div class="agregar-m">
-              <button class="button-agregar-modal">AGREGAR</button>
 
-              <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"> o
-                comprar
-                en AMAZON HANDMADE</a>
-            </div>
-          </section>
-        </section>
-        <section class="cerrar-modal">
-          <button class="button-cerrar-modal">
-            <img src="./img/modal/close-modal.svg" alt="cruz-cierre" />
-          </button>
-        </section>
-      </section>
       <div class="nube-1 nube-style" data-aos="fade-right" data-aos-duration="1400">
         <button class="boton-producto">
           <span class="titulo-producto"> Bowlsitos en chanclas amarillos 😍 </span>
@@ -266,6 +272,7 @@
             Se suben una encima de la otra, a las Tasitas les gustan los totem!
             🧗‍♀️
           </span>
+
           <span class="fotos-producto">./img/productos/carousel/prod-05/01.jpg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-05/02.jpg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-05/03.jpg</span>
@@ -275,6 +282,13 @@
           <span class="fotos-producto">./img/productos/carousel/prod-05/07.jpg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-05/08.jpg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-05/09.jpg</span>
+          <span class="opciones">Familia Tasitas de 3 €62</span>
+          <span class="opciones">Tasita llora llora €34</span>
+          <span class="opciones">Familia Tasitas completa €142</span>
+          <span class="opciones">Doña Tasita Amarillita €32</span>
+          <span class="opciones">Doña Tasita Blankita €32</span>
+          <span class="opciones">Doña Tasita Berdesita €32</span>
+
 
         </button>
       </div>
@@ -285,6 +299,7 @@
           <span class="detalles-producto">
             Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
           </span>
+
           <span class="fotos-producto">./img/productos/carousel/prod-06/01.jpg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-06/02.jpg</span>
           <span class="fotos-producto">./img/productos/carousel/prod-06/03.jpg</span>
@@ -294,6 +309,7 @@
           <span class="fotos-producto">./img/productos/carousel/prod-06/07.jpg</span>
           <span class="opciones">Awelito Dulse €34</span>
           <span class="opciones">Cachorro Enamorado €12</span>
+
         </button>
       </div>
       <div class="nube-7 nube-style" data-aos="fade-left" data-aos-duration="1900">
@@ -631,7 +647,7 @@
         <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank">Amazon
           Handmade</a>
         <a onclick="shareOnWhatsApp()" target="_blank">Whatsapp</a>
-        <p>SITE CREDITS</p>
+        <p class="creditos" onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)">SITE CREDITS</p>
       </div>
 
 
@@ -642,7 +658,7 @@
         <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"><img
             src="img/iconos-footer/etsy.svg" alt="Amazon Handmade"></a>
         <a onclick="shareOnWhatsApp()" target="_blank"><img src="img/iconos-footer/whatsapp.svg" alt="whatsapp"></a>
-        <p onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)">SITE CREDITS</p>
+        <p class="creditos" onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)">SITE CREDITS</p>
       </div>
     </section>
   </footer>
@@ -996,19 +1012,24 @@
     const listaProductos = document.querySelector('.menu-productos')
     const textoShop = document.querySelector('.titulos-shop')
     const limiteProductos = document.querySelector('.titulos-nosotros')
+    const modalProducto = document.querySelector('.modal-container')
     function actualizarPosicionDeListaDeShop() {
       const posicionActualDelScroll = window.scrollY || window.pageYOffset;
       const posicionObjetivoLimite = limiteProductos.getBoundingClientRect().top - 300 + posicionActualDelScroll;
       if (posicionActualDelScroll > posicionObjetivoLimite) {
         listaProductos.classList.remove('fade-in');
         textoShop.classList.remove('fade-in');
+        modalProducto.classList.remove('fade-in');
         listaProductos.classList.add('fade-out');
         textoShop.classList.add('fade-out');
+        modalProducto.classList.add('fade-out');
       } else {
         listaProductos.classList.remove('fade-out');
         textoShop.classList.remove('fade-out');
+        modalProducto.classList.remove('fade-out');
         listaProductos.classList.add('fade-in');
         textoShop.classList.add('fade-in');
+        modalProducto.classList.add('fade-in');
       }
     }
     window.addEventListener('scroll', actualizarPosicionDeListaDeShop);
