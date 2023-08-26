@@ -41,7 +41,8 @@ main {
 
 
 .separador {
-  height: 110px;
+
+  height: 100px;
 }
 
 .shop-y-menu {
@@ -253,6 +254,10 @@ main {
   background-image: url('./img/productos/producto10.svg');
 }
 
+
+
+
+
 .bolita-compra {
   background-color: #dd8b2dee;
   visibility: hidden;
@@ -287,22 +292,21 @@ main {
 
 
 .modal-container {
-  width: 100%;
   visibility: hidden;
   display: flex;
   position: fixed;
   z-index: 3;
   justify-content: space-between;
-  flex-shrink: 0;
-}
+  /* width: fit-content;
+  height: fit-content; */
 
-.contenedor-flex-modal {
-  display: flex;
-  margin: 0 auto;
-  margin-top: 150px;
+  /*  width: 840px;
+  height: 422px; */
+  width: 840px;
+  height: 422px;
+  flex-shrink: 0;
+
   border-radius: 8px;
-  min-width: min-content;
-  max-width: 50%;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.60) 65.11%, rgba(203, 55, 227, 0.60) 100%);
   /* glass */
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.12);
@@ -503,14 +507,13 @@ main {
   margin-right: 8px;
   margin-top: 8px;
   margin-left: -47px;
+
 }
 
 .button-cerrar-modal {
   background: none;
   border-style: none;
-
 }
-
 
 /* .carousel-control-next-icon, .carousel-control-prev-icon {
   width: 40px;
@@ -980,10 +983,7 @@ footer p {
   left: 90%;
   letter-spacing: 0.135em;
   color: rgba(101, 100, 100, 0.925);
-}
 
-.creditos:hover {
-  cursor: pointer;
 }
 
 .links-footer-desktop {
@@ -1081,8 +1081,8 @@ footer p {
   }
 
   .grid-container {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0%;
     margin-left: 18%;
     margin-right: 18%;
     margin-top: 43px;
@@ -1245,17 +1245,6 @@ footer p {
   }
 
 
-
-  .info-modal .precio {
-    position: absolute;
-    margin-top: 247px;
-    margin-left: 173px;
-
-  }
-
-  .carousel-control-next-icon {
-    margin-left: -6px;
-  }
 
   .info-modal .precio {
     position: absolute;
