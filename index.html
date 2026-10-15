@@ -1,788 +1,1257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="carrito.css" />
+    <meta
+      name="description"
+      content="Feliz no Cumple, ceramica y objetos de decoracion divertida"
+    />
+    <meta
+      name="keywords"
+      content="ceramica, decoracion del hogar, feliz no cumple, handmade, bowl de ceramica"
+    />
+    <title>FNC</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="carrito.css">
-  <meta name="description" content="Feliz no Cumple, ceramica y objetos de decoracion divertida">
-  <meta name="keywords" content="ceramica, decoracion del hogar, feliz no cumple, handmade, bowl de ceramica">
-  <title>FNC</title>
-</head>
+  <body class="body-index">
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary nav-style normal-display"
+    >
+      <div class="container-fluid container-fluid-s">
+        <div>
+          <ul class="secciones-navbar-normal">
+            <a class="nav-link nav-link-n active" aria-current="page" href="#"
+              >Shop</a
+            >
 
-<body class="body-index">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary nav-style normal-display">
-    <div class="container-fluid container-fluid-s">
+            <a
+              class="nav-link nav-link-n"
+              onclick="scrollero('.titulos-nosotros')"
+              >Nosotros</a
+            >
 
-      <div>
-        <ul class="secciones-navbar-normal">
+            <a
+              class="nav-link nav-link-n"
+              onclick="scrollero('.titulos-contacto')"
+              >Contacto</a
+            >
+          </ul>
+        </div>
+        <div><img src="./img/logo.svg" alt="" /></div>
 
-
-          <a class="nav-link nav-link-n active" aria-current="page" href="#">Shop</a>
-
-
-          <a class="nav-link nav-link-n" onclick="scrollero('.titulos-nosotros')">Nosotros</a>
-
-
-          <a class="nav-link nav-link-n" onclick="scrollero('.titulos-contacto')">Contacto</a>
-
-        </ul>
+        <div class="boton-carrito">
+          <img src="./img/carrito.svg" alt="imagen carrito" />
+          <div class="bolita-compra">:D</div>
+        </div>
+        <div class="boton-carrito">
+          <img src="./img/carrito.svg" alt="imagen carrito" />
+          <div class="bolita-compra">0</div>
+        </div>
       </div>
-      <div><img src="./img/logo.svg" alt="" /></div>
+    </nav>
 
-      <div class="boton-carrito"><img src="./img/carrito.svg" alt="imagen carrito" />
-        <div class="bolita-compra">0</div>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary nav-style hamburguesa-display"
+    >
+      <div class="container-fluid container-fluid-s">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="boton-hamburguesero"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div><img src="./img/logo.svg" alt="logo FNC" /></div>
+
+        <div class="boton-carrito">
+          <img src="./img/carrito.svg" alt="imagen carrito" />
+          <div class="bolita-compra-mobile">0</div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tienda
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Todos</a></li>
+                <li><a class="dropdown-item" href="#">Bowls</a></li>
+                <li><a class="dropdown-item" href="#">Miniaturas</a></li>
+                <li><a class="dropdown-item" href="#">Floreros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                onclick="scrollero('.titulos-nosotros')"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="scrollero('.titulos-contacto')"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary nav-style hamburguesa-display">
-    <div class="container-fluid container-fluid-s">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="boton-hamburguesero">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div><img src="./img/logo.svg" alt="logo FNC" /></div>
-
-      <div class="boton-carrito"><img src="./img/carrito.svg" alt="imagen carrito" />
-        <div class="bolita-compra-mobile">0</div>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Tienda
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Todos</a></li>
-              <li><a class="dropdown-item" href="#">Bowls</a></li>
-              <li><a class="dropdown-item" href="#">Miniaturas</a></li>
-              <li><a class="dropdown-item" href="#">Floreros</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" onclick="scrollero('.titulos-nosotros')">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" onclick="scrollero('.titulos-contacto')">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-  <main>
-
-    <section class="modal-container">
-      <div class="contenedor-flex-modal">
-
-
-        <section class="fotos-modal">
-          <div id="carouselExampleFade" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section>
-        <section class="info-modal">
-          <h1 id="nombre-producto"></h1>
-          <p class="detalles" id="detalle-producto"></p>
-          <p class="precio" id="precio-producto"></p>
-          <section>
-            <section class="container-envio">
-            </section>
-            <div class="agregar-m">
-              <button class="button-agregar-modal">AGREGAR</button>
-
-              <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"> o
-                comprar
-                en AMAZON HANDMADE</a>
+    <main>
+      <section class="modal-container">
+        <div class="contenedor-flex-modal">
+          <section class="fotos-modal">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-inner"></div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </section>
-        </section>
-        <section class="cerrar-modal">
-          <button class="button-cerrar-modal">
-            <img src="./img/modal/close-modal.svg" alt="cruz-cierre" />
-          </button>
-        </section>
+          <section class="info-modal">
+            <h1 id="nombre-producto"></h1>
+            <p class="detalles" id="detalle-producto"></p>
+            <p class="precio" id="precio-producto"></p>
+            <section>
+              <section class="container-envio"></section>
+              <div class="agregar-m">
+                <button class="button-agregar-modal">AGREGAR</button>
+
+                <a
+                  href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS"
+                  target="_blank"
+                >
+                  o comprar en AMAZON HANDMADE</a
+                >
+              </div>
+            </section>
+          </section>
+          <section class="cerrar-modal">
+            <button class="button-cerrar-modal">
+              <img src="./img/modal/close-modal.svg" alt="cruz-cierre" />
+            </button>
+          </section>
+        </div>
+      </section>
+
+      <div class="selector-mobil">
+        <select
+          id=""
+          class="menu-mobile"
+          required=""
+          aria-label="Default select example"
+        >
+          <option disabled selected>PRODUCTOS</option>
+          <option value="Todos">Todos</option>
+          <option value="Bowls">Bowls</option>
+          <option value="Contenedores">Contenedores</option>
+          <option value="Floreros">Floreros</option>
+          <option value="Tazas">Tazas</option>
+          <option value="Miniaturas">Miniaturas</option>
+        </select>
       </div>
-    </section>
 
-    <div class="selector-mobil">
-      <select id="" class="menu-mobile" required="" aria-label="Default select example">
-        <option disabled selected>PRODUCTOS</option>
-        <option value="Todos">Todos </option>
-        <option value="Bowls">Bowls </option>
-        <option value="Contenedores">Contenedores </option>
-        <option value="Floreros">Floreros </option>
-        <option value="Tazas">Tazas</option>
-        <option value="Miniaturas">Miniaturas </option>
-      </select>
-    </div>
+      <section class="shop-y-menu">
+        <section class="menu-productos">
+          <ul>
+            <li class="menu">Todos</li>
+            <li class="menu">Bowls</li>
+            <li class="menu">Contenedores</li>
+            <li class="menu">Floreros</li>
+            <li class="menu">Tazas</li>
+            <li class="menu">Miniaturas</li>
+          </ul>
+        </section>
 
-    <section class="shop-y-menu">
-
-      <section class="menu-productos">
-        <ul>
-          <li class="menu">Todos</li>
-          <li class="menu">Bowls</li>
-          <li class="menu">Contenedores</li>
-          <li class="menu">Floreros</li>
-          <li class="menu">Tazas</li>
-          <li class="menu">Miniaturas</li>
-        </ul>
+        <section class="titulos-shop">
+          <h1 class="titulo titulo-s">SHOP</h1>
+          <p class="parrafo parrafo-s">
+            Selecciona el objeto para ver más detalles, agregar al carrito y
+            consultar
+          </p>
+        </section>
       </section>
-
-
-
-
-
-
-
-
-
-      <section class="titulos-shop">
-        <h1 class="titulo titulo-s">SHOP</h1>
-        <p class="parrafo parrafo-s">Selecciona el objeto para ver más detalles, agregar al carrito y consultar </p>
-      </section>
-    </section>
-    <section class="grid-container">
-
-
-      <section class="carrito-container">
-        <div class="carrito-titulo">
-          <img src="./img/carrito.svg" alt="">
-          <span>Carrito de compras</span>
-          <div class="cerrar-carrito">
-            <img src="./img/carrito/equis-cerrar.svg" alt="cerrar carrito">
+      <section class="grid-container">
+        <section class="carrito-container">
+          <div class="carrito-titulo">
+            <img src="./img/carrito.svg" alt="" />
+            <span>Carrito de compras</span>
+            <div class="cerrar-carrito">
+              <img src="./img/carrito/equis-cerrar.svg" alt="cerrar carrito" />
+            </div>
           </div>
+
+          <span class="total">Total € <span class="valor-total">0</span></span>
+
+          <div class="boton-contenedor">
+            <select class="form-select envio eleccion-envio" required>
+              <option selected>ELEGIR ENVÍO</option>
+              <option value="España Peninsular">España Peninsular</option>
+              <option value="España Insular">España Insular</option>
+              <option value="Retiro Valencia (Gratis)">
+                Retiro Valencia (Gratis)
+              </option>
+              <option value="Otro lugar (aclarar en mensaje)">
+                Otro lugar (aclarar en mensaje)
+              </option>
+            </select>
+            <button class="carrito-boton" onclick="contactoDeCompra()">
+              CONCRETAR PEDIDO
+            </button>
+            <a class="seguir-viendo">SEGUIR VIENDO</a>
+          </div>
+        </section>
+
+        <div
+          class="nube-1 nube-style"
+          data-aos="fade-right"
+          data-aos-duration="1400"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto">
+              Bowlsitos en chanclas amarillos 😍
+            </span>
+            <span class="precio-producto"> 30 </span>
+            <span class="detalles-producto">
+              Bowlsitos esperan en chanclas con medias que le pongan caramelos
+              :D
+            </span>
+
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-01/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-01/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-01/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-01/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-01/05.jpg</span
+            >
+            <span class="opciones">Amarillito €40</span>
+            <span class="opciones">Negrito €30</span>
+          </button>
         </div>
 
-        <span class="total">Total € <span class="valor-total">0</span></span>
+        <div
+          class="nube-2 nube-style"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> EL TOMATON 😍 </span>
+            <span class="precio-producto"> 40 </span>
+            <span class="detalles-producto">
+              El tomatón se agarra del tallo y se le sale la cabesita por
+              distraído XD 15 cm x 15 cm
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-02/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-02/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-02/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-02/05.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-02/06.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-3 nube-style"
+          data-aos="fade-left"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto">
+              Bowlsito blanco en chanclas 😍
+            </span>
+            <span class="precio-producto"> 30 </span>
+            <span class="detalles-producto">
+              Bowlsitos esperan en chanclas con medias que le pongan caramelos
+              :D
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-03/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-03/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-03/03.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-4 nube-style"
+          data-aos="fade-down-right"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Perritos rosados :D </span>
+            <span class="precio-producto"> 60 </span>
+            <span class="detalles-producto">
+              Es un dulse dulse perrito que se puso el buzo de Barbie por el
+              calor :D
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-04/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-04/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-04/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-04/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-04/04.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-5 nube-style"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Familia Tasitas 😭 </span>
+            <span class="precio-producto"> 25 </span>
+            <span class="detalles-producto">
+              Se suben una encima de la otra, a las Tasitas les gustan los
+              totem! 🧗‍♀️
+            </span>
 
-        <div class="boton-contenedor">
-          <select class="form-select envio eleccion-envio" required>
-            <option selected>ELEGIR ENVÍO</option>
-            <option value="España Peninsular">España Peninsular</option>
-            <option value="España Insular">España Insular</option>
-            <option value="Retiro Valencia (Gratis)">Retiro Valencia (Gratis)</option>
-            <option value="Otro lugar (aclarar en mensaje)">Otro lugar (aclarar en mensaje)</option>
-          </select>
-          <button class="carrito-boton" onclick="contactoDeCompra()">CONCRETAR PEDIDO</button>
-          <a class="seguir-viendo">SEGUIR VIENDO</a>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/05.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/06.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/07.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/08.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-05/09.jpg</span
+            >
+            <span class="opciones">Familia Tasitas de 3 €62</span>
+            <span class="opciones">Tasita llora llora €34</span>
+            <span class="opciones">Familia Tasitas completa €142</span>
+            <span class="opciones">Doña Tasita Amarillita €32</span>
+            <span class="opciones">Doña Tasita Blankita €32</span>
+            <span class="opciones">Doña Tasita Berdesita €32</span>
+          </button>
+        </div>
+        <div
+          class="nube-6 nube-style"
+          data-aos="fade-left"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto">
+              Amigos bowlsitos en chanclas 😍
+            </span>
+            <span class="precio-producto"> 30 </span>
+            <span class="detalles-producto">
+              Bowlsitos esperan en chanclas con medias que le pongan caramelos
+              :D
+            </span>
+
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/05.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/06.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-06/07.jpg</span
+            >
+            <span class="opciones">Awelito Dulse €34</span>
+            <span class="opciones">Cachorro Enamorado €12</span>
+          </button>
+        </div>
+        <div
+          class="nube-7 nube-style"
+          data-aos="fade-left"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Bolsita triste azulona 👜 </span>
+            <span class="precio-producto"> 32 </span>
+            <span class="detalles-producto">
+              Ta triste porque el viento la llevó al país de la azulina
+            </span>
+
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-07/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-07/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-07/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-07/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-07/05.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-8 nube-style"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Contenedor escena nocturna 🐈‍⬛ </span>
+            <span class="precio-producto"> 28 </span>
+            <span class="detalles-producto">
+              En medio del sueño, el watito espera en la habitación lunar
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-08/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-08/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-08/03.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-9 nube-style"
+          data-aos="fade-down-right"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> La casa del watito </span>
+            <span class="precio-producto"> 42 </span>
+            <span class="detalles-producto">
+              ¿Qué cosas habrá dentro de la casa del watito negro?
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-09/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-09/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-09/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-09/04.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-10 nube-style"
+          data-aos="fade-right"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Jarrón confitero </span>
+            <span class="precio-producto"> 60 </span>
+            <span class="detalles-producto">
+              Colorido y cálido por fuera, fresco y oscuro por dentro
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-10/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-10/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-10/03.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-11 nube-style"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Gemelitos en disputa </span>
+            <span class="precio-producto"> 40 </span>
+            <span class="detalles-producto">
+              ¡Cuando las mediecitas de un gemelo son muy bonitas, el otro
+              gemelito mira de reojo!
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-11/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-11/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-11/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-11/04.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-12 nube-style"
+          data-aos="fade-left"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Sillón abandonado </span>
+            <span class="precio-producto"> 35 </span>
+            <span class="detalles-producto">
+              Alguien se despertó de un sueño y fue a tomar un vaso de agua. Aún
+              se ven las arrugas de la manta confundida
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-12/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-12/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-12/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-12/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-12/05.jpg</span
+            >
+          </button>
         </div>
 
-      </section>
+        <div
+          class="nube-13 nube-style"
+          data-aos="fade-right"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Taza Poison ☠️ </span>
+            <span class="precio-producto"> 45 </span>
+            <span class="detalles-producto">
+              No tiene materiales tóxicos, pero da toda la idea...
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-13/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-13/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-13/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-13/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-13/05.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-14 nube-style"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Florero o contendor invernal </span>
+            <span class="precio-producto"> 75 </span>
+            <span class="detalles-producto">
+              Motivos del sweater para mirar y sentirse abrigad@ 🧥
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-14/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-14/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-14/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-14/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-14/05.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-15 nube-style"
+          data-aos="fade-left"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Bolsa cuadridulada </span>
+            <span class="precio-producto"> 55 </span>
+            <span class="detalles-producto">
+              Escultura de bolsa con motivos de escultura pero para una bolsa :D
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-15/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-15/02.jpg</span
+            >
+          </button>
+        </div>
+        <div
+          class="nube-16 nube-style"
+          data-aos="fade-right"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> La siesta del perrito </span>
+            <span class="precio-producto"> 30 </span>
+            <span class="detalles-producto">
+              Dos piezas individuales. A saber: el sillón siestero del perrito y
+              el perrito siestero
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-16/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-16/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-16/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-16/04.jpg</span
+            >
+          </button>
+        </div>
 
-
-
-      <div class="nube-1 nube-style" data-aos="fade-right" data-aos-duration="1400">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Bowlsitos en chanclas amarillos 😍 </span>
-          <span class="precio-producto"> 30 </span>
-          <span class="detalles-producto">
-            Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
-          </span>
-
-          <span class="fotos-producto">./img/productos/carousel/prod-01/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-01/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-01/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-01/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-01/05.jpg</span>
-          <span class="opciones">Amarillito €40</span>
-          <span class="opciones">Negrito €30</span>
-        </button>
-      </div>
-
-      <div class="nube-2 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> EL TOMATON 😍 </span>
-          <span class="precio-producto"> 40 </span>
-          <span class="detalles-producto">
-            El tomatón se agarra del tallo y se le sale la cabesita por
-            distraído XD
-            15 cm x 15 cm
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-02/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-02/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-02/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-02/05.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-02/06.jpg</span>
-        </button>
-      </div>
-      <div class="nube-3 nube-style" data-aos="fade-left" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Bowlsito blanco en chanclas 😍 </span>
-          <span class="precio-producto"> 30 </span>
-          <span class="detalles-producto">
-            Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-03/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-03/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-03/03.jpg</span>
-
-        </button>
-      </div>
-      <div class="nube-4 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto">
-            Perritos rosados :D
-          </span>
-          <span class="precio-producto"> 60 </span>
-          <span class="detalles-producto">
-            Es un dulse dulse perrito que se puso el buzo de Barbie por el calor
-            :D
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-04/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-04/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-04/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-04/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-04/04.jpg</span>
-        </button>
-      </div>
-      <div class="nube-5 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Familia Tasitas 😭 </span>
-          <span class="precio-producto"> 25 </span>
-          <span class="detalles-producto">
-            Se suben una encima de la otra, a las Tasitas les gustan los totem!
-            🧗‍♀️
-          </span>
-
-          <span class="fotos-producto">./img/productos/carousel/prod-05/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/05.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/06.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/07.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/08.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-05/09.jpg</span>
-          <span class="opciones">Familia Tasitas de 3 €62</span>
-          <span class="opciones">Tasita llora llora €34</span>
-          <span class="opciones">Familia Tasitas completa €142</span>
-          <span class="opciones">Doña Tasita Amarillita €32</span>
-          <span class="opciones">Doña Tasita Blankita €32</span>
-          <span class="opciones">Doña Tasita Berdesita €32</span>
-
-
-        </button>
-      </div>
-      <div class="nube-6 nube-style" data-aos="fade-left" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Amigos bowlsitos en chanclas 😍 </span>
-          <span class="precio-producto"> 30 </span>
-          <span class="detalles-producto">
-            Bowlsitos esperan en chanclas con medias que le pongan caramelos :D
-          </span>
-
-          <span class="fotos-producto">./img/productos/carousel/prod-06/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-06/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-06/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-06/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-06/05.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-06/06.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-06/07.jpg</span>
-          <span class="opciones">Awelito Dulse €34</span>
-          <span class="opciones">Cachorro Enamorado €12</span>
-
-        </button>
-      </div>
-      <div class="nube-7 nube-style" data-aos="fade-left" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Bolsita triste azulona 👜 </span>
-          <span class="precio-producto"> 32 </span>
-          <span class="detalles-producto">
-            Ta triste porque el viento la llevó al país de la azulina
-          </span>
-
-          <span class="fotos-producto">./img/productos/carousel/prod-07/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-07/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-07/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-07/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-07/05.jpg</span>
-        </button>
-      </div>
-      <div class="nube-8 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Contenedor escena nocturna 🐈‍⬛ </span>
-          <span class="precio-producto"> 28 </span>
-          <span class="detalles-producto">
-            En medio del sueño, el watito espera en la habitación lunar
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-08/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-08/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-08/03.jpg</span>
-        </button>
-      </div>
-      <div class="nube-9 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> La casa del watito </span>
-          <span class="precio-producto"> 42 </span>
-          <span class="detalles-producto">
-            ¿Qué cosas habrá dentro de la casa del watito negro?
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-09/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-09/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-09/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-09/04.jpg</span>
-        </button>
-      </div>
-      <div class="nube-10 nube-style" data-aos="fade-right" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Jarrón confitero </span>
-          <span class="precio-producto"> 60 </span>
-          <span class="detalles-producto">
-            Colorido y cálido por fuera, fresco y oscuro por dentro
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-10/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-10/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-10/03.jpg</span>
-        </button>
-      </div>
-      <div class="nube-11 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Gemelitos en disputa </span>
-          <span class="precio-producto"> 40 </span>
-          <span class="detalles-producto">
-            ¡Cuando las mediecitas de un gemelo son muy bonitas, el otro gemelito mira de reojo!
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-11/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-11/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-11/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-11/04.jpg</span>
-        </button>
-      </div>
-      <div class="nube-12 nube-style" data-aos="fade-left" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Sillón abandonado </span>
-          <span class="precio-producto"> 35 </span>
-          <span class="detalles-producto">
-            Alguien se despertó de un sueño y fue a tomar un vaso de agua. Aún se ven las arrugas de la manta
-            confundida
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-12/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-12/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-12/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-12/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-12/05.jpg</span>
-        </button>
-      </div>
-
-      <div class="nube-13 nube-style" data-aos="fade-right" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Taza Poison ☠️ </span>
-          <span class="precio-producto"> 45 </span>
-          <span class="detalles-producto">
-            No tiene materiales tóxicos, pero da toda la idea...
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-13/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-13/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-13/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-13/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-13/05.jpg</span>
-        </button>
-      </div>
-      <div class="nube-14 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Florero o contendor invernal </span>
-          <span class="precio-producto"> 75 </span>
-          <span class="detalles-producto">
-            Motivos del sweater para mirar y sentirse abrigad@ 🧥
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-14/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-14/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-14/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-14/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-14/05.jpg</span>
-        </button>
-      </div>
-      <div class="nube-15 nube-style" data-aos="fade-left" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Bolsa cuadridulada </span>
-          <span class="precio-producto"> 55 </span>
-          <span class="detalles-producto">
-            Escultura de bolsa con motivos de escultura pero para una bolsa :D
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-15/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-15/02.jpg</span>
-        </button>
-      </div>
-      <div class="nube-16 nube-style" data-aos="fade-right" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> La siesta del perrito </span>
-          <span class="precio-producto"> 30 </span>
-          <span class="detalles-producto">
-            Dos piezas individuales. A saber: el sillón siestero del perrito y el perrito siestero
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-16/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-16/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-16/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-16/04.jpg</span>
-        </button>
-      </div>
-
-      <div class="nube-17 nube-style" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Nubesita basía 😢 </span>
-          <span class="precio-producto"> random </span>
-          <span class="detalles-producto">
-            Aún no subimos nada para esta nubecita, ¡pero puede pasar!
-          </span>
-          <!-- <span class="fotos-producto">./img/productos/producto1.svg</span>
+        <div
+          class="nube-17 nube-style"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Nubesita basía 😢 </span>
+            <span class="precio-producto"> random </span>
+            <span class="detalles-producto">
+              Aún no subimos nada para esta nubecita, ¡pero puede pasar!
+            </span>
+            <!-- <span class="fotos-producto">./img/productos/producto1.svg</span>
           <span class="fotos-producto">./img/productos/producto2.svg</span>
           <span class="fotos-producto">./img/productos/producto3.svg</span>
           <span class="fotos-producto">./img/productos/producto4.svg</span>
           <span class="fotos-producto">./img/productos/producto5.svg</span> -->
-        </button>
-      </div>
-      <div class="nube-18 nube-style" data-aos="fade-down-right" data-aos-duration="1900">
-        <button class="boton-producto">
-          <span class="titulo-producto"> Señor sillón </span>
-          <span class="precio-producto"> 23 </span>
-          <span class="detalles-producto">
-            Miniatura de un sillón con algunos siglos de vida
-          </span>
-          <span class="fotos-producto">./img/productos/carousel/prod-18/01.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-18/02.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-18/03.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-18/04.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-18/05.jpg</span>
-          <span class="fotos-producto">./img/productos/carousel/prod-18/06.jpg</span>
-        </button>
-      </div>
-
-    </section>
-
-    <div class="fondo-1 nuve" data-aos="fade-down" data-aos-duration="1900"></div>
-    <div class="fondo-2 nuve" data-aos="fade-right" data-aos-duration="1900"></div>
-    <div class="fondo-3 nuve" data-aos="fade-left" data-aos-duration="1900"></div>
-    <div class="fondo-4 nuve" data-aos="fade-down" data-aos-duration="1900"></div>
-    <div class="fondo-5 nuve" data-aos="fade-right" data-aos-duration="1900"></div>
-    <div class="fondo-6 nuve" data-aos="fade-left" data-aos-duration="1900"></div>
-    <!--  <div class="fondo-7 nuve" data-aos="fade-left" data-aos-duration="1900"></div> -->
-    <!-- nosotros -->
-
-
-
-    <section class="titulos-nosotros">
-      <p class="titulo titulo-p">¿QUIÉN?</p>
-      <p class="parrafo parrafo-n">Selecciona el objeto para ver más detalles, agregar al carrito y consultar </p>
-    </section>
-
-    <section class="nos-main">
-
-      <div class="nos-fixed">
-        <div class="nos-container">
-          <div class="nos-card">
-
-
-
-
-            <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./img/carrusel/a.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/b.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/c.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/d.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/e.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/f.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/g.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/h.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/k.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/i.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/j.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/carrusel/l.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            <div class="nos">
-              <div style="float:left; min-width: 35vh; max-width: 50vh; margin: 1em;">
-
-              </div>
-
-              <div class="nos-text">
-                <h3 style="font-family: 'Fira Sans Condensed', sans-serif; color: FF285C;"> Buenas!</h3>
-                <p class="card-text-nos"> Feliz no Cumple
-                  surgió en 2017, empezamos como una empresa al por mayor repitiendo una y otra vez
-                  cada
-                  diseño, y ahora hacemos nuestros propios
-                  productos, tratando de que cada uno tenga su propio proceso creativo y sea único,
-                  bueno,
-                  lo más que se pueda.
-                  Buscamos que trabajar sea divertido ¿Podrán? </p>
-              </div>
-            </div>
-          </div>
+          </button>
         </div>
-      </div>
-    </section>
-
-    <!-- contacto -->
-
-
-
-    <section class="main-contacto">
-      <section class="titulos-contacto">
-        <h2 class="titulo titulo-c">CONTACTO</h2>
-        <p class="parrafo parrafo-c"> ¿Alguna consulta? Te responderemos a la brevedad, ¡quizás! </p>
+        <div
+          class="nube-18 nube-style"
+          data-aos="fade-down-right"
+          data-aos-duration="1900"
+        >
+          <button class="boton-producto">
+            <span class="titulo-producto"> Señor sillón </span>
+            <span class="precio-producto"> 23 </span>
+            <span class="detalles-producto">
+              Miniatura de un sillón con algunos siglos de vida
+            </span>
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-18/01.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-18/02.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-18/03.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-18/04.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-18/05.jpg</span
+            >
+            <span class="fotos-producto"
+              >./img/productos/carousel/prod-18/06.jpg</span
+            >
+          </button>
+        </div>
       </section>
-      <div class="form-contenedor">
-        <div class="col-12 ps-0 pe-0 d-flex flex-column justify-content-center align-items-center" id="presupuesto">
 
+      <div
+        class="fondo-1 nuve"
+        data-aos="fade-down"
+        data-aos-duration="1900"
+      ></div>
+      <div
+        class="fondo-2 nuve"
+        data-aos="fade-right"
+        data-aos-duration="1900"
+      ></div>
+      <div
+        class="fondo-3 nuve"
+        data-aos="fade-left"
+        data-aos-duration="1900"
+      ></div>
+      <div
+        class="fondo-4 nuve"
+        data-aos="fade-down"
+        data-aos-duration="1900"
+      ></div>
+      <div
+        class="fondo-5 nuve"
+        data-aos="fade-right"
+        data-aos-duration="1900"
+      ></div>
+      <div
+        class="fondo-6 nuve"
+        data-aos="fade-left"
+        data-aos-duration="1900"
+      ></div>
+      <!--  <div class="fondo-7 nuve" data-aos="fade-left" data-aos-duration="1900"></div> -->
+      <!-- nosotros -->
 
+      <section class="titulos-nosotros">
+        <p class="titulo titulo-p">¿QUIÉN?</p>
+        <p class="parrafo parrafo-n">
+          Selecciona el objeto para ver más detalles, agregar al carrito y
+          consultar
+        </p>
+      </section>
 
-
-          <div class="col-12 mt-4 d-flex justify-content-center position: fixed;
-      display: flex;
-      padding: 3rem;
-      width: 50vw;
-      min-width: 350px;
-      background: linear-gradient(163.82deg, rgba(251, 243, 255, 0.3) 1.33%, rgba(195, 88, 245, 0) 95.23%);
-      /* glass */
-
-      box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.12);
-      backdrop-filter: blur(20px);
-      margin-top: 10%;
-      justify-content: center; box-form">
-
-
-
-
-            <form id="messageForm">
-              <div class="box-level-one d-flex d-row flex-wrap justify-content-around align-items-center">
-
-                <div class="box-son-level-one" data-aos="zoom-in">
-                  <label for="name">Nombre</label>
-                  <input type="text" id="name" name="name" autocomplete="off" required>
+      <section class="nos-main">
+        <div class="nos-fixed">
+          <div class="nos-container">
+            <div class="nos-card">
+              <div
+                id="carouselExampleAutoplaying"
+                class="carousel slide carousel-fade"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./img/carrusel/a.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/b.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/c.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/d.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/e.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/f.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/g.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/h.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/k.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/i.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/j.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/carrusel/l.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleAutoplaying"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleAutoplaying"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="nos">
+                <div
+                  style="
+                    float: left;
+                    min-width: 35vh;
+                    max-width: 50vh;
+                    margin: 1em;
+                  "
+                ></div>
 
-                <div class="box-son-level-one" data-aos="zoom-in">
-                  <label for="email">E-mail</label>
-                  <input type="email" id="email" name="email" autocomplete="on" required>
+                <div class="nos-text">
+                  <h3
+                    style="
+                      font-family: &quot;Fira Sans Condensed&quot;, sans-serif;
+                      color: FF285C;
+                    "
+                  >
+                    Buenas!
+                  </h3>
+                  <p class="card-text-nos">
+                    Feliz no Cumple surgió en 2017, empezamos como una empresa
+                    al por mayor repitiendo una y otra vez cada diseño, y ahora
+                    hacemos nuestros propios productos, tratando de que cada uno
+                    tenga su propio proceso creativo y sea único, bueno, lo más
+                    que se pueda. Buscamos que trabajar sea divertido ¿Podrán?
+                  </p>
                 </div>
-
               </div>
-
-              <div class="box-son-level-two" data-aos="zoom-in">
-                <label for="message">Cuentanos tu idea:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <input type="submit" onclick="enviarMensajeContacto()" value="Enviar Mensaje" data-aos="fade-right"
-                  data-aos-offset="50" data-aos-easing="ease-in-sine">
-              </div>
-            </form>
+            </div>
           </div>
-
-
         </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- contacto -->
 
-    <div class="separador"></div>
-  </main>
+      <section class="main-contacto">
+        <section class="titulos-contacto">
+          <h2 class="titulo titulo-c">CONTACTO</h2>
+          <p class="parrafo parrafo-c">
+            ¿Alguna consulta? Te responderemos a la brevedad, ¡quizás!
+          </p>
+        </section>
+        <div class="form-contenedor">
+          <div
+            class="col-12 ps-0 pe-0 d-flex flex-column justify-content-center align-items-center"
+            id="presupuesto"
+          >
+            <div
+              class="col-12 mt-4 d-flex justify-content-center position: fixed; display: flex; padding: 3rem; width: 50vw; min-width: 350px; background: linear-gradient(163.82deg, rgba(251, 243, 255, 0.3) 1.33%, rgba(195, 88, 245, 0) 95.23%); /* glass */ box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.12); backdrop-filter: blur(20px); margin-top: 10%; justify-content: center; box-form"
+            >
+              <form id="messageForm">
+                <div
+                  class="box-level-one d-flex d-row flex-wrap justify-content-around align-items-center"
+                >
+                  <div class="box-son-level-one" data-aos="zoom-in">
+                    <label for="name">Nombre</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
 
+                  <div class="box-son-level-one" data-aos="zoom-in">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="on"
+                      required
+                    />
+                  </div>
+                </div>
 
-  <footer>
-    <section class="footer-container">
-      <div class="links-footer-desktop">
-        <a href="https://www.instagram.com/feliznocumple_/" target="_blank">Instagram</a>
-        <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank">Amazon
-          Handmade</a>
-        <a onclick="shareOnWhatsApp()" target="_blank">Whatsapp</a>
-        <p class="creditos" onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)">SITE CREDITS</p>
-      </div>
+                <div class="box-son-level-two" data-aos="zoom-in">
+                  <label for="message">Cuentanos tu idea:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                  <input
+                    type="submit"
+                    onclick="enviarMensajeContacto()"
+                    value="Enviar Mensaje"
+                    data-aos="fade-right"
+                    data-aos-offset="50"
+                    data-aos-easing="ease-in-sine"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <div class="separador"></div>
+    </main>
 
+    <footer>
+      <section class="footer-container">
+        <div class="links-footer-desktop">
+          <a href="https://www.instagram.com/feliznocumple_/" target="_blank"
+            >Instagram</a
+          >
+          <a
+            href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS"
+            target="_blank"
+            >Amazon Handmade</a
+          >
+          <a onclick="shareOnWhatsApp()" target="_blank">Whatsapp</a>
+          <p
+            class="creditos"
+            onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)"
+          >
+            SITE CREDITS
+          </p>
+        </div>
 
-      <div class="links-footer-mobile">
-        <a href="https://www.instagram.com/feliznocumple_/" target="_blank"><img src="img/iconos-footer/instagram.svg"
-            alt="instagram"></a>
-        <a href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS" target="_blank"><img
-            src="img/iconos-footer/etsy.svg" alt="Amazon Handmade"></a>
-        <a onclick="shareOnWhatsApp()" target="_blank"><img src="img/iconos-footer/whatsapp.svg" alt="whatsapp"></a>
-        <p class="creditos" onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)">SITE CREDITS</p>
-      </div>
-    </section>
-  </footer>
+        <div class="links-footer-mobile">
+          <a href="https://www.instagram.com/feliznocumple_/" target="_blank"
+            ><img src="img/iconos-footer/instagram.svg" alt="instagram"
+          /></a>
+          <a
+            href="https://www.amazon.es/s?me=AUBJO8JIO7OEP&marketplaceID=A1RKKUPIHCS9HS"
+            target="_blank"
+            ><img src="img/iconos-footer/etsy.svg" alt="Amazon Handmade"
+          /></a>
+          <a onclick="shareOnWhatsApp()" target="_blank"
+            ><img src="img/iconos-footer/whatsapp.svg" alt="whatsapp"
+          /></a>
+          <p
+            class="creditos"
+            onclick="window.open(`https://github.com/Seleniooo/fnc-oficial`)"
+          >
+            SITE CREDITS
+          </p>
+        </div>
+      </section>
+    </footer>
 
-
-
-
-
-
-  <script>
-    /* función asignar categorias a cada imagen */
-    const categoriasEnum = {
-      bowls: 'Bowls',
-      contenedores: 'Contenedores',
-      floreros: 'Floreros',
-      tazas: 'Tazas',
-      miniaturas: 'Miniaturas',
-      todos: 'Todos'
-    }
-    const productosTotales = document.querySelectorAll('.nube-style')
-    for (let index = 1; index < productosTotales.length + 1; index++) {
-      let nombreGenericoClaseDeProducto = '.nube-'
-      let nombreParticularClaseDeProducto = nombreGenericoClaseDeProducto + index
-      switch (nombreParticularClaseDeProducto) {
-        case nombreGenericoClaseDeProducto + 1:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.bowls)
-          break;
-        case nombreGenericoClaseDeProducto + 2:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.contenedores)
-          break;
-        case nombreGenericoClaseDeProducto + 3:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.bowls)
-          break;
-        case nombreGenericoClaseDeProducto + 4:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.miniaturas)
-          break;
-        case nombreGenericoClaseDeProducto + 5:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.tazas)
-          break;
-        case nombreGenericoClaseDeProducto + 6:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.bowls)
-          break;
-        case nombreGenericoClaseDeProducto + 7:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.contenedores)
-          break;
-        case nombreGenericoClaseDeProducto + 8:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.contenedores)
-          break;
-        case nombreGenericoClaseDeProducto + 9:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.contenedores)
-          break;
-        case nombreGenericoClaseDeProducto + 10:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.contenedores)
-          break;
-        case nombreGenericoClaseDeProducto + 11:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.bowls)
-          break;
-        case nombreGenericoClaseDeProducto + 12:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.miniaturas)
-          break;
-        case nombreGenericoClaseDeProducto + 13:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.tazas)
-          break;
-        case nombreGenericoClaseDeProducto + 14:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.floreros)
-          break;
-        case nombreGenericoClaseDeProducto + 15:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.contenedores)
-          break;
-        case nombreGenericoClaseDeProducto + 16:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.miniaturas)
-          break;
-        case nombreGenericoClaseDeProducto + 17:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.bowls)
-          break;
-        case nombreGenericoClaseDeProducto + 18:
-          document.querySelector(nombreParticularClaseDeProducto).setAttribute('categoria', categoriasEnum.miniaturas)
-          break;
-        default:
-          console.log('producto fuera de rango')
+    <script>
+      /* función asignar categorias a cada imagen */
+      const categoriasEnum = {
+        bowls: "Bowls",
+        contenedores: "Contenedores",
+        floreros: "Floreros",
+        tazas: "Tazas",
+        miniaturas: "Miniaturas",
+        todos: "Todos",
+      };
+      const productosTotales = document.querySelectorAll(".nube-style");
+      for (let index = 1; index < productosTotales.length + 1; index++) {
+        let nombreGenericoClaseDeProducto = ".nube-";
+        let nombreParticularClaseDeProducto =
+          nombreGenericoClaseDeProducto + index;
+        switch (nombreParticularClaseDeProducto) {
+          case nombreGenericoClaseDeProducto + 1:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.bowls);
+            break;
+          case nombreGenericoClaseDeProducto + 2:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.contenedores);
+            break;
+          case nombreGenericoClaseDeProducto + 3:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.bowls);
+            break;
+          case nombreGenericoClaseDeProducto + 4:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.miniaturas);
+            break;
+          case nombreGenericoClaseDeProducto + 5:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.tazas);
+            break;
+          case nombreGenericoClaseDeProducto + 6:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.bowls);
+            break;
+          case nombreGenericoClaseDeProducto + 7:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.contenedores);
+            break;
+          case nombreGenericoClaseDeProducto + 8:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.contenedores);
+            break;
+          case nombreGenericoClaseDeProducto + 9:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.contenedores);
+            break;
+          case nombreGenericoClaseDeProducto + 10:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.contenedores);
+            break;
+          case nombreGenericoClaseDeProducto + 11:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.bowls);
+            break;
+          case nombreGenericoClaseDeProducto + 12:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.miniaturas);
+            break;
+          case nombreGenericoClaseDeProducto + 13:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.tazas);
+            break;
+          case nombreGenericoClaseDeProducto + 14:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.floreros);
+            break;
+          case nombreGenericoClaseDeProducto + 15:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.contenedores);
+            break;
+          case nombreGenericoClaseDeProducto + 16:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.miniaturas);
+            break;
+          case nombreGenericoClaseDeProducto + 17:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.bowls);
+            break;
+          case nombreGenericoClaseDeProducto + 18:
+            document
+              .querySelector(nombreParticularClaseDeProducto)
+              .setAttribute("categoria", categoriasEnum.miniaturas);
+            break;
+          default:
+            console.log("producto fuera de rango");
+        }
       }
-    }
 
-    /* funcion cerrar modal en click */
-    const cerrarModal = document.querySelector(".button-cerrar-modal");
-    cerrarModal.addEventListener("click", () => {
-      const modalDisplay = document.querySelector(".modal-container");
-      modalDisplay.style.visibility = "hidden";
-    });
+      /* funcion cerrar modal en click */
+      const cerrarModal = document.querySelector(".button-cerrar-modal");
+      cerrarModal.addEventListener("click", () => {
+        const modalDisplay = document.querySelector(".modal-container");
+        modalDisplay.style.visibility = "hidden";
+      });
 
-    /* funcion agregar compra en click */
-    const agregarProductoModal = document.querySelector(".button-agregar-modal");
-    agregarProductoModal.addEventListener("click", () => {
-      const precio = document.querySelector("#precio-producto").textContent.split('€')[1];
-      if (!precio) {
-        return alert('debes seleccionar un modelo')
-      }
-      const contadorProductos = document.querySelector(".bolita-compra");
-      const contadorProductosMobile = document.querySelector(".bolita-compra-mobile");
-      const precioTotalProductos = document.querySelector(".valor-total");
-      contadorProductos.style.visibility = "visible";
-      contadorProductosMobile.style.visibility = "visible";
-      contadorProductos.textContent = +contadorProductos.textContent + 1
-      contadorProductosMobile.textContent = +contadorProductosMobile.textContent + 1
-      let titulo = document.querySelector("#nombre-producto").textContent;
+      /* funcion agregar compra en click */
+      const agregarProductoModal = document.querySelector(
+        ".button-agregar-modal",
+      );
+      agregarProductoModal.addEventListener("click", () => {
+        const precio = document
+          .querySelector("#precio-producto")
+          .textContent.split("€")[1];
+        if (!precio) {
+          return alert("debes seleccionar un modelo");
+        }
+        const contadorProductos = document.querySelector(".bolita-compra");
+        const contadorProductosMobile = document.querySelector(
+          ".bolita-compra-mobile",
+        );
+        const precioTotalProductos = document.querySelector(".valor-total");
+        contadorProductos.style.visibility = "visible";
+        contadorProductosMobile.style.visibility = "visible";
+        contadorProductos.textContent = +contadorProductos.textContent + 1;
+        contadorProductosMobile.textContent =
+          +contadorProductosMobile.textContent + 1;
+        let titulo = document.querySelector("#nombre-producto").textContent;
 
-      const detalle = document.querySelector("#detalle-producto").textContent;
-      let imagenesRuta = document.querySelector('.carousel-inner').firstChild.querySelector('img').src
-      imagenesRuta = imagenesRuta.split('prod-')[1].split('/')[0]
-      const nubeEncontrada = document.querySelector(`.nube-${+imagenesRuta.toString()}`)
-      const imagenCapturada = window.getComputedStyle(nubeEncontrada).getPropertyValue('background-image');
-      const urlImagen = 'img' + imagenCapturada.split('img')[1]
-      const imagen = urlImagen.slice(0, -2)
-      precioTotalProductos.textContent = +precioTotalProductos.textContent + +precio
-      const opcionSeleccionada = document.querySelector('#opciones-producto')
-      if (opcionSeleccionada) {
-        titulo = `${titulo} opción ${opcionSeleccionada.value}`
-      }
-      añadirProductoACarrito(titulo, precio, imagen)
-    });
-    function añadirProductoACarrito(titulo, precio, imagen) {
-      var myDiv = document.querySelector('.carrito-container');
-      const newSection = document.createElement('section');
-      newSection.innerHTML = `<section class="carrito-detalles">
+        const detalle = document.querySelector("#detalle-producto").textContent;
+        let imagenesRuta = document
+          .querySelector(".carousel-inner")
+          .firstChild.querySelector("img").src;
+        imagenesRuta = imagenesRuta.split("prod-")[1].split("/")[0];
+        const nubeEncontrada = document.querySelector(
+          `.nube-${+imagenesRuta.toString()}`,
+        );
+        const imagenCapturada = window
+          .getComputedStyle(nubeEncontrada)
+          .getPropertyValue("background-image");
+        const urlImagen = "img" + imagenCapturada.split("img")[1];
+        const imagen = urlImagen.slice(0, -2);
+        precioTotalProductos.textContent =
+          +precioTotalProductos.textContent + +precio;
+        const opcionSeleccionada = document.querySelector("#opciones-producto");
+        if (opcionSeleccionada) {
+          titulo = `${titulo} opción ${opcionSeleccionada.value}`;
+        }
+        añadirProductoACarrito(titulo, precio, imagen);
+      });
+      function añadirProductoACarrito(titulo, precio, imagen) {
+        var myDiv = document.querySelector(".carrito-container");
+        const newSection = document.createElement("section");
+        newSection.innerHTML = `<section class="carrito-detalles">
         <div class="foto-carrito">
           <img src="${imagen}" width="100px" alt="imagen producto">
         </div>
@@ -795,266 +1264,297 @@
           <img class="boton-eliminar" src="./img/carrito/basura.svg" alt="borrar producto">
         </div>
       </section>`;
-      // Get the third child of myDiv
-      const thirdChild = myDiv.children[2];
-      // Insert the new section before the third child
-      myDiv.insertBefore(newSection, thirdChild);
-    }
+        // Get the third child of myDiv
+        const thirdChild = myDiv.children[2];
+        // Insert the new section before the third child
+        myDiv.insertBefore(newSection, thirdChild);
+      }
 
-    /* funcion mostar modal detalles en click sobre producto */
-    const mostrarModal = document.querySelectorAll(".boton-producto");
-    for (let i = 0; i < mostrarModal.length; i++) {
-      mostrarModal[i].addEventListener("click", function () {
-        const carritoDisplay = document.querySelector(".carrito-container");
-        if (carritoDisplay) {
-          carritoDisplay.style.visibility = "hidden";
-        }
-        const titulo = this.querySelector(".titulo-producto").textContent;
-        const precio = this.querySelector(".precio-producto").textContent;
-        const detalle = this.querySelector(".detalles-producto").textContent
-        const fotos = this.querySelectorAll(".fotos-producto")
-        const carruselContenedorDeFotos = document.querySelector('.carousel-inner')
-        while (carruselContenedorDeFotos.firstChild) {
-          carruselContenedorDeFotos.removeChild(carruselContenedorDeFotos.firstChild);
-        }
-        for (let index = 0; index < fotos.length; index++) {
-          const divDeFoto = document.createElement('div');
-          if (index === 0) {
-            divDeFoto.className = 'carousel-item active';
+      /* funcion mostar modal detalles en click sobre producto */
+      const mostrarModal = document.querySelectorAll(".boton-producto");
+      for (let i = 0; i < mostrarModal.length; i++) {
+        mostrarModal[i].addEventListener("click", function () {
+          const carritoDisplay = document.querySelector(".carrito-container");
+          if (carritoDisplay) {
+            carritoDisplay.style.visibility = "hidden";
           }
-          else {
-            divDeFoto.className = 'carousel-item';
+          const titulo = this.querySelector(".titulo-producto").textContent;
+          const precio = this.querySelector(".precio-producto").textContent;
+          const detalle = this.querySelector(".detalles-producto").textContent;
+          const fotos = this.querySelectorAll(".fotos-producto");
+          const carruselContenedorDeFotos =
+            document.querySelector(".carousel-inner");
+          while (carruselContenedorDeFotos.firstChild) {
+            carruselContenedorDeFotos.removeChild(
+              carruselContenedorDeFotos.firstChild,
+            );
           }
-          divDeFoto.innerHTML = `
-            <img src="${fotos[index].textContent}" class="d-block" alt="${fotos[index].textContent.split('/').pop()}">
+          for (let index = 0; index < fotos.length; index++) {
+            const divDeFoto = document.createElement("div");
+            if (index === 0) {
+              divDeFoto.className = "carousel-item active";
+            } else {
+              divDeFoto.className = "carousel-item";
+            }
+            divDeFoto.innerHTML = `
+            <img src="${fotos[index].textContent}" class="d-block" alt="${fotos[index].textContent.split("/").pop()}">
         `;
-          carruselContenedorDeFotos.appendChild(divDeFoto)
-        }
-        const opciones = []
-        this.querySelectorAll('.opciones').forEach(el => { opciones.push(el.textContent) })
-        document.querySelector("#nombre-producto").textContent = titulo;
-        document.querySelector("#precio-producto").textContent = "€" + precio;
-        document.querySelector("#detalle-producto").textContent = detalle;
-        if (opciones.length !== 0) {
-          const precio = document.querySelector("#precio-producto")
-          precio.textContent = "Elegir modelo"
-          let innerHTMLOpciones = ''
-          for (let index = 0; index < opciones.length; index++) {
-            innerHTMLOpciones += `<option value="${opciones[index]}">${opciones[index]} </option>`
+            carruselContenedorDeFotos.appendChild(divDeFoto);
           }
-          const childDetalle = document.querySelector("#detalle-producto")
-          const divOpciones = document.createElement('div');
-          divOpciones.innerHTML = `
+          const opciones = [];
+          this.querySelectorAll(".opciones").forEach((el) => {
+            opciones.push(el.textContent);
+          });
+          document.querySelector("#nombre-producto").textContent = titulo;
+          document.querySelector("#precio-producto").textContent = "€" + precio;
+          document.querySelector("#detalle-producto").textContent = detalle;
+          if (opciones.length !== 0) {
+            const precio = document.querySelector("#precio-producto");
+            precio.textContent = "Elegir modelo";
+            let innerHTMLOpciones = "";
+            for (let index = 0; index < opciones.length; index++) {
+              innerHTMLOpciones += `<option value="${opciones[index]}">${opciones[index]} </option>`;
+            }
+            const childDetalle = document.querySelector("#detalle-producto");
+            const divOpciones = document.createElement("div");
+            divOpciones.innerHTML = `
             <select id="opciones-producto" class="form-select envio" required aria-label="Default select example">
               <option disabled selected>ELEGIR MODELO</option>
               ${innerHTMLOpciones}
             </select>
           `;
-          childDetalle.appendChild(divOpciones)
-          const selectOpciones = document.querySelector("#opciones-producto")
-          selectOpciones.addEventListener('change', function () {
-            const precio = document.querySelector("#precio-producto")
-            precio.textContent = "€ " + selectOpciones.value.split('€')[1]
-          });
+            childDetalle.appendChild(divOpciones);
+            const selectOpciones = document.querySelector("#opciones-producto");
+            selectOpciones.addEventListener("change", function () {
+              const precio = document.querySelector("#precio-producto");
+              precio.textContent = "€ " + selectOpciones.value.split("€")[1];
+            });
+          }
+          const modalDisplay = document.querySelector(".modal-container");
+          modalDisplay.style.visibility = "visible";
+        });
+      }
+
+      /* funcion elegir categoria en click */
+      const opcionesMenu = document.querySelectorAll(".menu");
+      const opcionesMenuMobile = document.querySelector(".menu-mobile");
+      function filtrarProductos(categoria) {
+        document.querySelectorAll(".nube-style").forEach((el) => {
+          el.style.filter = "none";
+        });
+        if (categoria === categoriasEnum.todos) {
+          return;
         }
-        const modalDisplay = document.querySelector(".modal-container");
-        modalDisplay.style.visibility = "visible";
-      });
-    }
-
-    /* funcion elegir categoria en click */
-    const opcionesMenu = document.querySelectorAll('.menu')
-    const opcionesMenuMobile = document.querySelector('.menu-mobile')
-    function filtrarProductos(categoria) {
-      document.querySelectorAll('.nube-style').forEach(el => {
-        el.style.filter = "none"
-      })
-      if (categoria === categoriasEnum.todos) {
-        return
+        document.querySelectorAll(".nube-style").forEach((el) => {
+          if (el.getAttribute("categoria") !== categoria) {
+            el.style.filter = "grayscale(100%)";
+          }
+        });
       }
-      document.querySelectorAll('.nube-style').forEach(el => {
-        if (el.getAttribute('categoria') !== categoria) {
-          el.style.filter = "grayscale(100%)"
+      for (let i = 0; i < opcionesMenu.length; i++) {
+        opcionesMenu[i].addEventListener("click", function () {
+          filtrarProductos(
+            categoriasEnum[opcionesMenu[i].textContent.toLowerCase()],
+          );
+        });
+      }
+
+      opcionesMenuMobile.addEventListener("change", function () {
+        console.log("ola", opcionesMenuMobile.value);
+        filtrarProductos(
+          categoriasEnum[opcionesMenuMobile.value.toLowerCase()],
+        );
+      });
+
+      /* función para compra por Whatsapp */
+      function contactoDeCompra() {
+        const comprasSeleccionadas = [];
+        document.querySelectorAll(".carrito-detalles").forEach((el) => {
+          comprasSeleccionadas.push(
+            el.textContent.trim().replace(/[\s\n]+/g, " "),
+          );
+        });
+        if (comprasSeleccionadas.length === 0) {
+          return alert("No tienes compras seleccionadas aún!");
         }
-      })
-    }
-    for (let i = 0; i < opcionesMenu.length; i++) {
-      opcionesMenu[i].addEventListener("click", function () {
-        filtrarProductos(categoriasEnum[(opcionesMenu[i].textContent).toLowerCase()])
-      });
-    }
-
-    opcionesMenuMobile.addEventListener("change", function () {
-      console.log('ola', opcionesMenuMobile.value)
-      filtrarProductos(categoriasEnum[(opcionesMenuMobile.value).toLowerCase()])
-    });
-
-    /* función para compra por Whatsapp */
-    function contactoDeCompra() {
-      const comprasSeleccionadas = []
-      document.querySelectorAll('.carrito-detalles').forEach(el => { comprasSeleccionadas.push(el.textContent.trim().replace(/[\s\n]+/g, ' ')) })
-      if (comprasSeleccionadas.length === 0) {
-        return alert('No tienes compras seleccionadas aún!')
+        const opcionEnvio = document.querySelector(".eleccion-envio")?.value;
+        if (opcionEnvio === "ELEGIR ENVÍO") {
+          return alert("Por favor, elige una opción de envío.");
+        }
+        const mensajeAEnviar = encodeURIComponent(
+          `Hola! Estuve viendo tu página de cerámicas FNC y quisiera consultarte para comprar estas piezas con envío en ${opcionEnvio}: ${comprasSeleccionadas}`,
+        );
+        const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
+        window.open(whatsappUrl);
       }
-      const opcionEnvio = document.querySelector('.eleccion-envio')?.value;
-      if (opcionEnvio === 'ELEGIR ENVÍO') {
-        return alert("Por favor, elige una opción de envío.")
-      }
-      const mensajeAEnviar = encodeURIComponent(`Hola! Estuve viendo tu página de cerámicas FNC y quisiera consultarte para comprar estas piezas con envío en ${opcionEnvio}: ${comprasSeleccionadas}`)
-      const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
-      window.open(whatsappUrl);
-    }
 
-    /* funcion abrir carrito en click */
-    const abrirCarrito = document.querySelectorAll(".boton-carrito");
-    for (let carritoAbierto of abrirCarrito) {
-      carritoAbierto.addEventListener("click", () => {
+      /* funcion abrir carrito en click */
+      const abrirCarrito = document.querySelectorAll(".boton-carrito");
+      for (let carritoAbierto of abrirCarrito) {
+        carritoAbierto.addEventListener("click", () => {
+          const carritoDisplay = document.querySelector(".carrito-container");
+          carritoDisplay.style.visibility = "visible";
+          const modalDisplay = document.querySelector(".modal-container");
+          modalDisplay.style.visibility = "hidden";
+
+          /* esto le da la posibilidad de borrado en cada botón eliminar de tus compras */
+          const botonesEliminar = document.querySelectorAll(".boton-eliminar");
+          for (let i = 0; i < botonesEliminar.length; i++) {
+            botonesEliminar[i].addEventListener("mouseenter", function () {
+              botonesEliminar[i].style.cursor = "pointer";
+            });
+          }
+          function bajarNumeroCompra(precioABajar) {
+            const contadorProductos = document.querySelector(".bolita-compra");
+            const contadorProductosMobile = document.querySelector(
+              ".bolita-compra-mobile",
+            );
+            const precioTotalProductos = document.querySelector(".valor-total");
+            const precio = precioABajar.split("€")[1];
+            precioTotalProductos.textContent =
+              +precioTotalProductos.textContent - +precio;
+            contadorProductos.style.visibility = "visible";
+            contadorProductos.textContent = +contadorProductos.textContent - 1;
+            contadorProductosMobile.textContent =
+              +contadorProductosMobile.textContent - 1;
+          }
+          for (let i = 0; i < botonesEliminar.length; i++) {
+            botonesEliminar[i].addEventListener("click", function () {
+              const elementoABorrar =
+                botonesEliminar[i].parentElement.parentElement;
+              elementoABorrar.parentElement.removeChild(elementoABorrar);
+              precioAQuitar =
+                elementoABorrar.querySelector(".precio-prod").textContent;
+              bajarNumeroCompra(precioAQuitar);
+            });
+          }
+        });
+      }
+
+      /* funcion cerrar carrito en click de botón cerrar o de "seguir viendo"*/
+      const cerrarCarrito = document.querySelector(".cerrar-carrito");
+      cerrarCarrito.addEventListener("click", () => {
         const carritoDisplay = document.querySelector(".carrito-container");
-        carritoDisplay.style.visibility = "visible";
-        const modalDisplay = document.querySelector(".modal-container");
-        modalDisplay.style.visibility = "hidden";
-
-        /* esto le da la posibilidad de borrado en cada botón eliminar de tus compras */
-        const botonesEliminar = document.querySelectorAll(".boton-eliminar");
-        for (let i = 0; i < botonesEliminar.length; i++) {
-          botonesEliminar[i].addEventListener("mouseenter", function () {
-            botonesEliminar[i].style.cursor = 'pointer';
-          });
-        }
-        function bajarNumeroCompra(precioABajar) {
-          const contadorProductos = document.querySelector(".bolita-compra");
-          const contadorProductosMobile = document.querySelector(".bolita-compra-mobile");
-          const precioTotalProductos = document.querySelector(".valor-total");
-          const precio = precioABajar.split('€')[1];
-          precioTotalProductos.textContent = +precioTotalProductos.textContent - +precio
-          contadorProductos.style.visibility = "visible";
-          contadorProductos.textContent = +contadorProductos.textContent - 1
-          contadorProductosMobile.textContent = +contadorProductosMobile.textContent - 1
-        }
-        for (let i = 0; i < botonesEliminar.length; i++) {
-          botonesEliminar[i].addEventListener("click", function () {
-            const elementoABorrar = botonesEliminar[i].parentElement.parentElement
-            elementoABorrar.parentElement.removeChild(elementoABorrar)
-            precioAQuitar = elementoABorrar.querySelector('.precio-prod').textContent
-            bajarNumeroCompra(precioAQuitar)
-          });
-        }
+        carritoDisplay.style.visibility = "hidden";
       });
-    }
-
-    /* funcion cerrar carrito en click de botón cerrar o de "seguir viendo"*/
-    const cerrarCarrito = document.querySelector(".cerrar-carrito");
-    cerrarCarrito.addEventListener("click", () => {
-      const carritoDisplay = document.querySelector(".carrito-container");
-      carritoDisplay.style.visibility = "hidden";
-    });
-    const seguirViendo = document.querySelector(".seguir-viendo");
-    seguirViendo.addEventListener("click", () => {
-      const carritoDisplay = document.querySelector(".carrito-container");
-      carritoDisplay.style.visibility = "hidden";
-    });
-
-    /* función para contacto por Whatsapp */
-    function shareOnWhatsApp() {
-      const mensajeAEnviar = encodeURIComponent(`Hola! Estuve viendo tu página de cerámicas FNC y te quería consultar lo siguiente:`)
-      const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
-      window.open(whatsappUrl);
-    }
-
-    /* funciónes para contacto por mail */
-    function enviarMensajeContacto() {
-      const emailContacto = document.querySelector('#email')
-      const nombreContacto = document.querySelector('#name')
-      const mensajeContacto = document.querySelector('#message')
-      if (!emailContacto.value || !nombreContacto.value || !mensajeContacto.value) {
-        return alert('Te faltan datos para enviar mensaje!')
-      }
-      const regexMail = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,})+$/;
-      if (!regexMail.test(emailContacto.value)) {
-        return alert('el mail no tiene el formato correcto nombre@algo.com')
-      }
-      try {
-        enviarMail(nombreContacto.value, mensajeContacto.value, emailContacto.value)
-        return alert('Gracias por tu mensaje. Te estaremos leyendo a la brevedad :)')
-      }
-      catch (error) {
-        alert('error al enviar email, por favor intenta contactarnos por otro medio')
-        console.log(error)
-      }
-    }
-    async function enviarMail(nombre, mensaje, email) {
-      await emailjs.send(
-        'service_363or5n',
-        'template_ulhiyc8',
-        {
-          from_name: nombre,
-          to_name: 'FNC',
-          message: `${nombre} con el mail ${email}, te envió este mensaje: ${mensaje}`,
-          reply_to: email
-        },
-        'fjQ8S9HQVsvmN9doG'
-      )
-    }
-
-
-    /* funciones para navegar entre las secciones de la página */
-    function scrollero(adonde) {
-      const section = document.querySelector(adonde);
-      const sectionYPosition = section.getBoundingClientRect().top;
-      const offsetPosition = sectionYPosition + window.scrollY;
-      window.scrollTo({
-        top: offsetPosition - 60,
-        behavior: 'smooth'
+      const seguirViendo = document.querySelector(".seguir-viendo");
+      seguirViendo.addEventListener("click", () => {
+        const carritoDisplay = document.querySelector(".carrito-container");
+        carritoDisplay.style.visibility = "hidden";
       });
-    }
 
-    /* función para que la lista de productos no siga scrolleando más allá de la parte shop */
-    const listaProductos = document.querySelector('.menu-productos')
-    const textoShop = document.querySelector('.titulos-shop')
-    const limiteProductos = document.querySelector('.titulos-nosotros')
-    const modalProducto = document.querySelector('.modal-container')
-    function actualizarPosicionDeListaDeShop() {
-      const posicionActualDelScroll = window.scrollY || window.pageYOffset;
-      const posicionObjetivoLimite = limiteProductos.getBoundingClientRect().top - 300 + posicionActualDelScroll;
-      if (posicionActualDelScroll > posicionObjetivoLimite) {
-        listaProductos.classList.remove('fade-in');
-        textoShop.classList.remove('fade-in');
-        modalProducto.classList.remove('fade-in');
-        listaProductos.classList.add('fade-out');
-        textoShop.classList.add('fade-out');
-        modalProducto.classList.add('fade-out');
-      } else {
-        listaProductos.classList.remove('fade-out');
-        textoShop.classList.remove('fade-out');
-        modalProducto.classList.remove('fade-out');
-        listaProductos.classList.add('fade-in');
-        textoShop.classList.add('fade-in');
-        modalProducto.classList.add('fade-in');
+      /* función para contacto por Whatsapp */
+      function shareOnWhatsApp() {
+        const mensajeAEnviar = encodeURIComponent(
+          `Hola! Estuve viendo tu página de cerámicas FNC y te quería consultar lo siguiente:`,
+        );
+        const whatsappUrl = `https://wa.me/34644024685?text=${mensajeAEnviar}`;
+        window.open(whatsappUrl);
       }
-    }
-    window.addEventListener('scroll', actualizarPosicionDeListaDeShop);
 
-    /* fin de script con funciones nativas :)) */
-  </script>
+      /* funciónes para contacto por mail */
+      function enviarMensajeContacto() {
+        const emailContacto = document.querySelector("#email");
+        const nombreContacto = document.querySelector("#name");
+        const mensajeContacto = document.querySelector("#message");
+        if (
+          !emailContacto.value ||
+          !nombreContacto.value ||
+          !mensajeContacto.value
+        ) {
+          return alert("Te faltan datos para enviar mensaje!");
+        }
+        const regexMail = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,})+$/;
+        if (!regexMail.test(emailContacto.value)) {
+          return alert("el mail no tiene el formato correcto nombre@algo.com");
+        }
+        try {
+          enviarMail(
+            nombreContacto.value,
+            mensajeContacto.value,
+            emailContacto.value,
+          );
+          return alert(
+            "Gracias por tu mensaje. Te estaremos leyendo a la brevedad :)",
+          );
+        } catch (error) {
+          alert(
+            "error al enviar email, por favor intenta contactarnos por otro medio",
+          );
+          console.log(error);
+        }
+      }
+      async function enviarMail(nombre, mensaje, email) {
+        await emailjs.send(
+          "service_363or5n",
+          "template_ulhiyc8",
+          {
+            from_name: nombre,
+            to_name: "FNC",
+            message: `${nombre} con el mail ${email}, te envió este mensaje: ${mensaje}`,
+            reply_to: email,
+          },
+          "fjQ8S9HQVsvmN9doG",
+        );
+      }
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    emailjs.init("YOUR_EMAILJS_USER_ID");
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      /* funciones para navegar entre las secciones de la página */
+      function scrollero(adonde) {
+        const section = document.querySelector(adonde);
+        const sectionYPosition = section.getBoundingClientRect().top;
+        const offsetPosition = sectionYPosition + window.scrollY;
+        window.scrollTo({
+          top: offsetPosition - 60,
+          behavior: "smooth",
+        });
+      }
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init(); 
-  </script>
+      /* función para que la lista de productos no siga scrolleando más allá de la parte shop */
+      const listaProductos = document.querySelector(".menu-productos");
+      const textoShop = document.querySelector(".titulos-shop");
+      const limiteProductos = document.querySelector(".titulos-nosotros");
+      const modalProducto = document.querySelector(".modal-container");
+      function actualizarPosicionDeListaDeShop() {
+        const posicionActualDelScroll = window.scrollY || window.pageYOffset;
+        const posicionObjetivoLimite =
+          limiteProductos.getBoundingClientRect().top -
+          300 +
+          posicionActualDelScroll;
+        if (posicionActualDelScroll > posicionObjetivoLimite) {
+          listaProductos.classList.remove("fade-in");
+          textoShop.classList.remove("fade-in");
+          modalProducto.classList.remove("fade-in");
+          listaProductos.classList.add("fade-out");
+          textoShop.classList.add("fade-out");
+          modalProducto.classList.add("fade-out");
+        } else {
+          listaProductos.classList.remove("fade-out");
+          textoShop.classList.remove("fade-out");
+          modalProducto.classList.remove("fade-out");
+          listaProductos.classList.add("fade-in");
+          textoShop.classList.add("fade-in");
+          modalProducto.classList.add("fade-in");
+        }
+      }
+      window.addEventListener("scroll", actualizarPosicionDeListaDeShop);
 
+      /* fin de script con funciones nativas :)) */
+    </script>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init("YOUR_EMAILJS_USER_ID");
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-</body>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
